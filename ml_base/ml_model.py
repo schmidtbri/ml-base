@@ -7,7 +7,7 @@ class MLModel(ABC):
 
     @property
     @abstractmethod
-    def display_name(self):
+    def display_name(self) -> str:
         """Abstract property that returns a display name for the model.
 
         .. note::
@@ -18,7 +18,7 @@ class MLModel(ABC):
 
     @property
     @abstractmethod
-    def qualified_name(self):
+    def qualified_name(self) -> str:
         """Abstract property that returns the qualified name of the model.
 
         .. note::
@@ -29,26 +29,36 @@ class MLModel(ABC):
 
     @property
     @abstractmethod
-    def description(self):
+    def description(self) -> str:
         """Abstract property that returns a description of the model."""
         raise NotImplementedError()
 
     @property
     @abstractmethod
-    def version(self):
+    def version(self) -> str:
         """Abstract property that returns the model's version as a string."""
         raise NotImplementedError()
 
     @property
     @abstractmethod
     def input_schema(self):
-        """Property that returns the schema that is accepted by the predict() method."""
+        """Property that returns the schema that is accepted by the predict() method.
+
+        .. note::
+            This property must return a subtype of pydantic.BaseModel.
+
+        """
         raise NotImplementedError()
 
     @property
     @abstractmethod
     def output_schema(self):
-        """Property returns the schema that is returned by the predict() method."""
+        """Property returns the schema that is returned by the predict() method.
+
+        .. note::
+            This property must return a subtype of pydantic.BaseModel.
+
+        """
         raise NotImplementedError()
 
     @abstractmethod

@@ -1,8 +1,6 @@
 # ML Base Package
 Base classes and utilities that are useful for deploying ML models.
 
-![Test and Build](https://github.com/schmidtbri/# ZeroRPC ML Model Deployment
-
 ![Test and Build](https://github.com/schmidtbri/ml-base/workflows/Test%20and%20Build/badge.svg)
 
 ## Introduction

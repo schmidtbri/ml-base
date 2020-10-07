@@ -33,6 +33,9 @@ dependencies: ## install dependencies from requirements.txt
 test-dependencies: ## install dependencies from test_requirements.txt
 	pip install -r test_requirements.txt
 
+doc-dependencies: ## install dependencies from doc_requirements.txt
+	pip install -r doc_requirements.txt
+
 clean-venv: ## remove all packages from virtual environment
 	pip freeze | grep -v "^-e" | xargs pip uninstall -y
 

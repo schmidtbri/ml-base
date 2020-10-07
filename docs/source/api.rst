@@ -2,15 +2,15 @@ API Documentation
 =================
 
 
-MLModel Base Class
-##################
+Base Classes
+############
 
 .. automodule:: ml_base.ml_model
     :members:
 
 
-Model Manager
-#############
+Utilities
+#########
 
 .. automodule:: ml_base.utilities.model_manager
     :members:
