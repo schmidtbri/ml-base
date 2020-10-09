@@ -1,6 +1,6 @@
 from os import path
 from io import open
-from setuptools import setup
+from setuptools import setup, find_packages
 
 from ml_base import __name__, __version__, __doc__
 
@@ -18,7 +18,7 @@ setup(name=__name__,
       long_description=long_description,
       long_description_content_type="text/markdown",
       url="https://github.com/schmidtbri/ml-base",
-      packages=["ml_base"],
+      packages=find_packages(exclude=["tests"]),
       python_requires=">=3.5",
       install_requires=["pydantic>=1.5"],
       tests_require=['pytest', 'pytest-html', 'pylama', 'coverage', 'coverage-badge', 'bandit', 'safety', "pytype"],

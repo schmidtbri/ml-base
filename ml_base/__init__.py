@@ -2,7 +2,7 @@
 
 from ml_base.ml_model import MLModel
 
-__version_info__ = ('0', '1', '0')
-__version__ = '.'.join(__version_info__)
+__version_info__ = ("0", "1", "0")
+__version__ = ".".join(__version_info__)
 
-__all__ = ['MLModel']
+__all__ = ["MLModel"]
