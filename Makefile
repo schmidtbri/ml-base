@@ -1,4 +1,4 @@
-TEST_PATH=./tests/unit_tests
+TEST_PATH=./tests
 
 .DEFAULT_GOAL := help
 
