@@ -59,8 +59,8 @@ urllib3==1.25.9
 
 # these packages are used to do static type analysis
 decorator==4.4.2
-importlab==0.5.1
-networkx==2.4
-ninja==1.9.0.post1
-pytype==2020.5.13
-typed-ast==1.4.1
+importlab==0.6.1
+networkx==2.5
+ninja==1.10.0.post2
+pytype==2021.1.14
+typed-ast==1.4.2

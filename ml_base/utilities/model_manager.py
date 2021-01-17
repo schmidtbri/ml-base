@@ -2,20 +2,28 @@
 import importlib
 from typing import List
 
-from ml_base.ml_model import MLModel
+from ml_base import MLModel
 
 
 class ModelManager(object):
     """Singleton class that instantiates and manages model objects."""
 
     def __new__(cls):  # noqa: D102
-        if not hasattr(cls, "instance"):
-            cls.instance = super(ModelManager, cls).__new__(cls)
-        return cls.instance
+        if not hasattr(cls, "_instance"):
+            cls._instance = super(ModelManager, cls).__new__(cls)
+            cls._instance._is_initialized = False
+        return cls._instance
 
     def __init__(self):
         """Construct ModelManager object."""
-        self._models = []
+        if self._is_initialized is False: # pytype: disable=attribute-error
+            self._models = []
+            self._is_initialized = True
+
+    @classmethod
+    def clear_instance(cls):
+        """Clear singleton instance from class."""
+        del cls._instance
 
     def load_model(self, class_path: str) -> None:
         """Import and instantiate an MLModel object from a class path.
@@ -38,14 +46,23 @@ class ModelManager(object):
         # instantiating the model object from the class
         model_object = model_class()
 
-        if not isinstance(model_object, MLModel):
+        self.add_model(model_object)
+
+    def add_model(self, model: MLModel) -> None:
+        """Add a model to the ModelManager.
+
+        :param model: instance of MLModel
+        :returns: None
+
+        """
+        if not isinstance(model, MLModel):
             raise ValueError("ModelManager instance can only hold references to objects of type MLModel.")
 
-        if model_object.qualified_name in [model.qualified_name for model in self._models]:
+        if model.qualified_name in [model.qualified_name for model in self._models]:
             raise ValueError("A model with the same qualified name is already in the ModelManager singleton.")
 
         # saving the model reference to the models list
-        self._models.append(model_object)
+        self._models.append(model)
 
     def remove_model(self, qualified_name: str) -> None:
         """Remove an MLModel object from the ModelManager singleton.
