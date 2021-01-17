@@ -2,14 +2,12 @@ import unittest
 from traceback import print_tb
 
 from ml_base.utilities.model_manager import ModelManager
-from tests.mocks import MLModelMock
+from tests.mocks import MLModelMock, SomeClass
 
 
 class ModelManagerTests(unittest.TestCase):
 
     def test_model_manager_will_return_same_instance_when_instantiated_many_times(self):
-        """Testing that the ModelManager will return the same instance of an MLModel class from several different
-        references of ModelManager."""
         # arrange, act
         # instantiating the model manager class twice
         first_model_manager = ModelManager()
@@ -25,8 +23,25 @@ class ModelManagerTests(unittest.TestCase):
         self.assertTrue(str(first_model_manager) == str(second_model_manager))
         self.assertTrue(str(first_model_object) == str(second_model_object))
 
+        # cleanup
+        first_model_manager.clear_instance()
+
+    def test_model_manager_will_not_execute_init_twice(self):
+        # arrange
+        # instantiating the model manager class twice
+        first_model_manager = ModelManager()
+        first_model_manager.load_model("tests.mocks.MLModelMock")
+
+        # act
+        second_model_manager = ModelManager()
+
+        # assert
+        self.assertTrue(first_model_manager._models != [])
+
+        # cleanup
+        first_model_manager.clear_instance()
+
     def test_load_model_method(self):
-        """Testing the load_model() method."""
         # arrange
         # instantiating the model manager class
         model_manager = ModelManager()
@@ -47,6 +62,9 @@ class ModelManagerTests(unittest.TestCase):
         # assert
         self.assertFalse(exception_raised)
         self.assertTrue(model_object is not None)
+
+        # cleanup
+        model_manager.clear_instance()
 
     def test_load_model_method_with_wrong_class_path(self):
         """Testing the load_model() method."""
@@ -69,16 +87,20 @@ class ModelManagerTests(unittest.TestCase):
         self.assertTrue(exception_raised)
         self.assertTrue(exception_message == "No module named 'sdf'")
 
+        # cleanup
+        model_manager.clear_instance()
+
     def test_only_ml_model_instances_allowed_to_be_stored(self):
         """Testing that the ModelManager only allows MLModel objects to be stored."""
         # arrange
         model_manager = ModelManager()
+        some_object = SomeClass()
 
         # act
         exception_raised = False
         exception_message = ""
         try:
-            model_manager.load_model("tests.mocks.SomeClass")
+            model_manager.add_model(some_object)
         except Exception as e:
             exception_raised = True
             exception_message = str(e)
@@ -87,20 +109,25 @@ class ModelManagerTests(unittest.TestCase):
         self.assertTrue(exception_raised)
         self.assertTrue(exception_message == "ModelManager instance can only hold references to objects of type MLModel.")
 
+        # cleanup
+        model_manager.clear_instance()
+
     def test_model_manager_does_not_allow_duplicate_qualified_names(self):
         """Testing that the ModelManager does not allow duplicate qualified names in the singleton."""
         # arrange
         model_manager = ModelManager()
+        model1 = MLModelMock()
+        model2 = MLModelMock()
 
         # act
         # loading the first instance of the model object
-        model_manager.load_model("tests.mocks.MLModelMock")
+        model_manager.add_model(model1)
 
         exception_raised = False
         exception_message = ""
         try:
             # loading it again
-            model_manager.load_model("tests.mocks.MLModelMock")
+            model_manager.add_model(model2)
         except Exception as e:
             exception_raised = True
             exception_message = str(e)
@@ -108,6 +135,9 @@ class ModelManagerTests(unittest.TestCase):
         # assert
         self.assertTrue(exception_raised)
         self.assertTrue(exception_message == "A model with the same qualified name is already in the ModelManager singleton.")
+
+        # cleanup
+        model_manager.clear_instance()
 
     def test_remove_model_method(self):
         """Testing the remove_model() method."""
@@ -140,6 +170,9 @@ class ModelManagerTests(unittest.TestCase):
         self.assertTrue(exception_raised2)
         self.assertTrue(exception_message2 == "Instance of model 'qualified_name' not found in ModelManager.")
 
+        # cleanup
+        model_manager.clear_instance()
+
     def test_remove_model_method_with_missing_model(self):
         """Testing that the ModelManager raises ValueError exception when removing a model that is not found."""
         # arrange
@@ -160,6 +193,9 @@ class ModelManagerTests(unittest.TestCase):
         self.assertTrue(exception_raised)
         self.assertTrue(exception_message == "Instance of model 'asdf' not found in ModelManager.")
 
+        # cleanup
+        model_manager.clear_instance()
+
     def test_get_models_method(self):
         """Testing get_models method."""
         # arrange
@@ -175,6 +211,9 @@ class ModelManagerTests(unittest.TestCase):
         self.assertTrue(models[0]["qualified_name"] == "qualified_name")
         self.assertTrue(models[0]["description"] == "description")
         self.assertTrue(models[0]["version"] == "1.0.0")
+
+        # cleanup
+        model_manager.clear_instance()
 
     def test_get_model_metadata_method(self):
         """Testing get_model_metadata method."""
@@ -193,6 +232,9 @@ class ModelManagerTests(unittest.TestCase):
         self.assertTrue(model_metadata["version"] == "1.0.0")
         self.assertTrue(type(model_metadata["input_schema"]) is dict)
         self.assertTrue(type(model_metadata["output_schema"]) is dict)
+
+        # cleanup
+        model_manager.clear_instance()
 
     def test_get_model_metadata_method_with_missing_model(self):
         """Testing get_model_metadata method with missing model."""
@@ -214,6 +256,9 @@ class ModelManagerTests(unittest.TestCase):
         self.assertTrue(excpeption_raised)
         self.assertTrue(exception_message == "Instance of model 'asdf' not found in ModelManager.")
 
+        # cleanup
+        model_manager.clear_instance()
+
     def test_get_model_method(self):
         """Testing the get_model method."""
         # arrange
@@ -232,6 +277,9 @@ class ModelManagerTests(unittest.TestCase):
         # assert
         self.assertFalse(exception_raised)
         self.assertTrue(type(model) is MLModelMock)
+
+        # cleanup
+        model_manager.clear_instance()
 
     def test_get_model_method_with_missing_model(self):
         """Testing that the ModelManager raises ValueError exception when a model is not found."""
@@ -253,6 +301,9 @@ class ModelManagerTests(unittest.TestCase):
         # assert
         self.assertTrue(exception_raised)
         self.assertTrue(exception_message == "Instance of model 'asdf' not found in ModelManager.")
+
+        # cleanup
+        model_manager.clear_instance()
 
 
 if __name__ == '__main__':
