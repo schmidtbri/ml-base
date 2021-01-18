@@ -16,7 +16,7 @@ class ModelManager(object):
 
     def __init__(self):
         """Construct ModelManager object."""
-        if self._is_initialized is False: # pytype: disable=attribute-error
+        if self._is_initialized is False:  # pytype: disable=attribute-error
             self._models = []
             self._is_initialized = True
 

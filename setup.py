@@ -24,6 +24,6 @@ setup(name=__name__,
       tests_require=['pytest', 'pytest-html', 'pylama', 'coverage', 'coverage-badge', 'bandit', 'safety', "pytype"],
       classifiers=[
           "Programming Language :: Python :: 3",
-          "OSI Approved :: BSD License",
+          "License :: OSI Approved :: BSD License",
           "Operating System :: OS Independent",
       ])
