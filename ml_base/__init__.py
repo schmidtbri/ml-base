@@ -5,4 +5,4 @@ from ml_base.ml_model import MLModel
 
 __all__ = ["MLModel"]
 
-__version__ = "1.2.3"
+__version__ = "<version_placeholder>"
