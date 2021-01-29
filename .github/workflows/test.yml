@@ -3,7 +3,8 @@ name: "Inspect and Test Code"
 on:
   push:
     branches:
-      - master
+      - '*'
+      - '!master'
   pull_request:
     branches:
       - master
