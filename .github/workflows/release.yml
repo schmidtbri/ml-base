@@ -32,7 +32,6 @@ jobs:
       run: |
         sed 's/<version_placeholder>/'"${SOURCE_TAG:1}"'/g' ml_base/__init__.py > __init__.py
         mv __init__.py ml_base/__init__.py
-        cat ml_base/__init__.py
 
     - name: Build and Publish to Test PyPi
       if: github.ref != 'refs/heads/master'
