@@ -112,3 +112,5 @@ reports/
 vendors/
 
 .pytype
+
+site/

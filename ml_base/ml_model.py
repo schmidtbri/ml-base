@@ -1,5 +1,6 @@
 """Base class for building ML models that are easy to deploy and integrate."""
 from abc import ABC, abstractmethod
+from pydantic import BaseModel
 
 
 class MLModel(ABC):
@@ -10,7 +11,10 @@ class MLModel(ABC):
     def display_name(self) -> str:
         """Abstract property that returns a display name for the model.
 
-        .. note::
+        Returns:
+            str: The display name of the model.
+
+        !!! note
             This is a name for the model that looks good in user interfaces.
 
         """
@@ -21,7 +25,10 @@ class MLModel(ABC):
     def qualified_name(self) -> str:
         """Abstract property that returns the qualified name of the model.
 
-        .. note::
+        Returns:
+            str: The qualified name of the model.
+
+        !!! warning
             A qualified name is an unambiguous identifier for the model.
 
         """
@@ -30,21 +37,34 @@ class MLModel(ABC):
     @property
     @abstractmethod
     def description(self) -> str:
-        """Abstract property that returns a description of the model."""
+        """Abstract property that returns a description of the model.
+
+        Returns:
+            str: The description of the model.
+
+        """
         raise NotImplementedError()
 
     @property
     @abstractmethod
     def version(self) -> str:
-        """Abstract property that returns the model's version as a string."""
+        """Abstract property that returns the model's version as a string.
+
+        Returns:
+            str: The version of the model.
+
+        """
         raise NotImplementedError()
 
     @property
     @abstractmethod
-    def input_schema(self):
+    def input_schema(self) -> BaseModel:
         """Property that returns the schema that is accepted by the predict() method.
 
-        .. note::
+        Returns:
+            BaseModel: The input schema of the model.
+
+        !!! note
             This property must return a subtype of pydantic.BaseModel.
 
         """
@@ -55,7 +75,10 @@ class MLModel(ABC):
     def output_schema(self):
         """Property returns the schema that is returned by the predict() method.
 
-        .. note::
+        Returns:
+            BaseModel: The output schema of the model.
+
+        !!! note
             This property must return a subtype of pydantic.BaseModel.
 
         """
@@ -70,9 +93,11 @@ class MLModel(ABC):
     def predict(self, data):
         """Prediction with the model.
 
-        :param data: data used by the model for making a prediction
-        :type data: object --  can be any python type
-        :rtype: python object -- can be any python type
+        Args:
+            data: data used by the model for making a prediction
+
+        Returns:
+            object: can be any python type
 
         """
         raise NotImplementedError()

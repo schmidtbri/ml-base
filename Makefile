@@ -76,10 +76,10 @@ check-pytype:  ## perform static code analysis
 	pytype ml_base
 
 build-docs:  ## build the documentation
-	sphinx-build docs/source docs/build/html -b html -a
+	mkdocs build
 
 view-docs:  ## open a web browser to view the documentation
-	open docs/build/html/index.html
+	open site/index.html
 
 clean-docs:  ## clean up the files in the docs build folder
-	rm -rf docs/build
+	rm -rf site

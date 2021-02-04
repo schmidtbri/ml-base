@@ -1,0 +1,25 @@
+site_name: ML Base
+theme:
+  name: "material"
+repo_url: https://github.com/schmidtbri/ml-base
+site_description: ML Base Package Documentation
+copyright: 2021, Brian Schmidt
+nav:
+    - Home: index.md
+    - Examples: examples.ipynb
+    - API: api.md
+markdown_extensions:
+  - admonition
+plugins:
+  - search
+  - mkdocstrings
+  - mknotebooks:
+      tag_remove_configs:
+        remove_cell_tags:
+          - Remove_cell
+        remove_all_outputs_tags:
+          - Remove_all_output
+        remove_single_output_tags:
+          - Remove_single_output
+        remove_input_tags:
+          - Remove_input

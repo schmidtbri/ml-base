@@ -9,6 +9,7 @@ class ModelManager(object):
     """Singleton class that instantiates and manages model objects."""
 
     def __new__(cls):  # noqa: D102
+        """Create and return a new ModelManager instance, after instance is first created it will always be returned."""
         if not hasattr(cls, "_instance"):
             cls._instance = super(ModelManager, cls).__new__(cls)
             cls._instance._is_initialized = False
@@ -28,11 +29,12 @@ class ModelManager(object):
     def load_model(self, class_path: str) -> None:
         """Import and instantiate an MLModel object from a class path.
 
-        :param class_path: Class path to the model's MLModel class.
-        :type class_path: str
-        :raises ValueError: Raised if the model is not a subtype of MLModel, or if a model with the same qualified name
-          is already loaded in the ModelManager.
-        :rtype: None
+        Args:
+            class_path: Class path to the model's MLModel class.
+
+        Raises:
+            ValueError: Raised if the model is not a subtype of MLModel, or if a model with the same qualified name
+                      is already loaded in the ModelManager.
 
         """
         # splitting the class_path into module path and class name
@@ -51,8 +53,8 @@ class ModelManager(object):
     def add_model(self, model: MLModel) -> None:
         """Add a model to the ModelManager.
 
-        :param model: instance of MLModel
-        :returns: None
+        Args:
+            model: instance of MLModel
 
         """
         if not isinstance(model, MLModel):
@@ -67,11 +69,11 @@ class ModelManager(object):
     def remove_model(self, qualified_name: str) -> None:
         """Remove an MLModel object from the ModelManager singleton.
 
-        :param qualified_name: The qualified name of the model to be returned.
-        :type qualified_name: str
-        :raises ValueError: Raised if a model with the qualified name can't be found in the ModelManager singleton.
-        :return: None
-        :rtype: None
+        Args:
+            qualified_name: The qualified name of the model to be returned.
+
+        Raises:
+            ValueError: Raised if a model with the qualified name can't be found in the ModelManager singleton.
 
         """
         # searching the list of model objects to find the one with the right qualified name
@@ -85,10 +87,10 @@ class ModelManager(object):
     def get_models(self) -> List[dict]:
         """Get a list of models in the model manager singleton.
 
-        :return: List of dictionaries containing information about the model instances in the ModelManager singleton.
-        :rtype: list
+        Returns:
+            List of dictionaries containing information about the model instances in the ModelManager singleton.
 
-        .. note::
+        !!! note
             The dictionaries in the list returned by this method contain these keys:
 
             - display_name
@@ -106,12 +108,13 @@ class ModelManager(object):
     def get_model_metadata(self, qualified_name: str) -> dict:
         """Get model metadata by qualified name.
 
-        :param qualified_name:
-        :type qualified_name:
-        :return: Dictionary containing information about a model in the ModelManager singleton.
-        :rtype: dict
+        Args:
+            qualified_name: Qualified name of the model for which to get metadata
 
-        .. note::
+        Returns:
+            Dictionary containing information about a model in the ModelManager singleton.
+
+        !!! note
             The dictionaries in the list returned by this method contain these keys:
 
             - display_name
@@ -141,11 +144,14 @@ class ModelManager(object):
     def get_model(self, qualified_name: str) -> MLModel:
         """Get a model object by qualified name.
 
-        :param qualified_name: The qualified name of the model to be returned.
-        :type qualified_name: str
-        :raises ValueError: Raised if a model with the qualified name can't be found in the ModelManager singleton.
-        :return: Model object
-        :rtype: MLModel
+        Args:
+            qualified_name: The qualified name of the model to be returned.
+
+        Returns:
+            Model object
+
+        Raises:
+            ValueError: Raised if a model with the qualified name can't be found in the ModelManager singleton.
 
         """
         # searching the list of model objects to find the one with the right qualified name

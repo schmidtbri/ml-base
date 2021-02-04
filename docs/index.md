@@ -1,6 +1,8 @@
-************
-Introduction
-************
+# Welcome to the ML Base Package Documentation
+
+The ml_base package is useful for deploying machine learning models.
+
+# Introduction
 
 The ml_base package defines a common set of base classes that are useful for working with machine learning model
 prediction code. The base classes define a set of interfaces that help to write ML code that is reusable and testable.
@@ -19,35 +21,32 @@ model in a standardized way:
 The package also includes a ModelManager class that is able to instantiate and manage models that are created using the
 MLModel base class.
 
+# FAQ
 
-FAQ
-###
-
-* Why bother with base classes and interfaces? Isn't it just extra work?
+#### Why bother with base classes and interfaces? Isn't it just extra work?
 
 Interface-driven software development can be very helpful when building complex software systems. By using the MLModel
 base class to deliver the prediction functionality, developing software that makes use of the machine learning model is
-greatly simplified and the model is much more accesible and easier to use. Developing the prediction functionality of
+greatly simplified, and the model is much more accessible and easier to use. Developing the prediction functionality of
 your ML model around the MLModel base class provides a simple "meeting point" between your model and anyone that wants
 to use it, the user doesn't need to worry about the implementation of the model and you don't need to worry about the
 use cases that your model will be used in.
 
-* Why not just deliver a serialized model object to the software engineer?
+#### Why not just deliver a serialized model object to the software engineer?
 
 Having a class that wraps around your model object provides a great place to do things that make your model easier
 to use. For example:
 
-    - Deserialize model parameters from disk so that using the model is a easy as instantiating a class and calling
-      predict()
-    - Validate inputs before sending them to the model
-    - Modify predictions before sending them back to the calling code
-    - Return metadata about your model
-    - Convert model inputs from a developer-friendly data structure (dictionaries and lists) to a model-friendly data
-      structure (dataframes)
-    - Convert model outputs from a dataframe to a dictionary or list
+   - Deserialize model parameters from disk so that using the model is a easy as instantiating a class and calling
+     predict()
+   - Validate inputs before sending them to the model
+   - Modify predictions before sending them back to the calling code
+   - Return metadata about your model
+   - Convert model inputs from a developer-friendly data structure (dictionaries and lists) to a model-friendly data
+     structure (dataframes)
+   - Convert model outputs from a dataframe to a dictionary or list
 
-
-* So what do I have to do to use the base classes?
+#### So what do I have to do to use the base classes?
 
 Create a wrapper class around your model that inherits from the MLModel base class and implement the required methods.
 You can follow the example implementation available in the documentation.
