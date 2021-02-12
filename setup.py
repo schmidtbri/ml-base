@@ -22,6 +22,11 @@ setup(name=__name__,
       python_requires=">=3.5",
       install_requires=["pydantic>=1.5"],
       tests_require=['pytest', 'pytest-html', 'pylama', 'coverage', 'coverage-badge', 'bandit', 'safety', "pytype"],
+      project_urls={
+          "Documentation": "https://schmidtbri.github.io/ml-base/",
+          "Code": "https://github.com/schmidtbri/ml-base",
+          "Tracker": "https://github.com/schmidtbri/ml-base/issues"
+      },
       classifiers=[
           "Programming Language :: Python :: 3",
           "License :: OSI Approved :: BSD License",

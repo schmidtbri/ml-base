@@ -48,7 +48,7 @@ jobs:
           path: site
 
       - name: "Push to gh-pages Branch"
-        if: github.ref != 'refs/heads/master'
+        if: github.ref == 'refs/heads/master'
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.SSH_PRIVATE_KEY }}
