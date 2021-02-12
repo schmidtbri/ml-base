@@ -58,11 +58,11 @@ class MLModel(ABC):
 
     @property
     @abstractmethod
-    def input_schema(self) -> BaseModel:
+    def input_schema(self):
         """Property that returns the schema that is accepted by the predict() method.
 
         Returns:
-            BaseModel: The input schema of the model.
+            pydantic.BaseModel: The input schema of the model.
 
         !!! note
             This property must return a subtype of pydantic.BaseModel.
@@ -76,7 +76,7 @@ class MLModel(ABC):
         """Property returns the schema that is returned by the predict() method.
 
         Returns:
-            BaseModel: The output schema of the model.
+            pydantic.BaseModel: The output schema of the model.
 
         !!! note
             This property must return a subtype of pydantic.BaseModel.
