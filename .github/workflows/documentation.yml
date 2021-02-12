@@ -20,10 +20,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: webfactory/ssh-agent@v0.4.1
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
       - name: "Set up Python 3.7"
         uses: actions/setup-python@v2
         with:
@@ -53,4 +49,7 @@ jobs:
 
       - name: "Push to gh-pages Branch"
         if: github.ref != 'refs/heads/master'
-        run: mkdocs gh-deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          publish_dir: ./site
