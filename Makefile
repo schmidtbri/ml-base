@@ -83,3 +83,9 @@ view-docs:  ## open a web browser to view the documentation
 
 clean-docs:  ## clean up the files in the docs build folder
 	rm -rf site
+
+run-examples:  ## run all example notebooks in examples directory
+	jupyter nbconvert --to notebook --execute examples/basic.ipynb
+
+convert-examples:  ## convert the example notebooks into Markdown files in docs folder
+	jupyter nbconvert --to markdown examples/basic.ipynb --output-dir='./docs'
