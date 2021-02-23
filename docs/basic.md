@@ -1,6 +1,14 @@
-# Examples
+Title: Introducing the ml_base Package
+Date: 2021-02-22 07:54
+Category: Blog
+Slug: introducing-ml-base-package
+Authors: Brian Schmidt
+Summary: The ml_base package defines a common set of base classes that are useful for working with machine learning model prediction code. The base classes define a set of interfaces that help to write ML code that is reusable and testable. The core of the ml_base package is the MLModel class which defines a simple interface for doing machine learning model prediction. I this blog post, we'll show how to use the MLModel class.
 
-This example can be executed directly by loading the notebook file in examples/basic.ipynb.
+
+# Introducing the ml_base Package
+
+These examples run within an Jupyter notebook session. To clear out the results of cells that we don't want to see we'll use the clear_output() function provided by Jupyter:
 
 
 ```python
@@ -12,6 +20,7 @@ To get started we'll install the ml_base package:
 
 ```python
 !pip install ml_base
+
 clear_output()
 ```
 
@@ -22,6 +31,7 @@ To show how to work with the MLModel base class we'll create a simple model that
 
 ```python
 !pip install scikit-learn
+
 clear_output()
 ```
 
@@ -153,13 +163,37 @@ The MLModel base class defines a set of properties that must be provided by any 
 ```python
 model = IrisModel()
 
+print(model.qualified_name)
+```
+
+    iris_model
+
+
+The qualified name of the model uniquely identifies the instance of the model within the system. Right now the qualified name is hardcoded in the code of the model's class, but this can be made more dynamic in the future. The qualified name should also be a string that is easy to embed in a URL, so it shouldn't have spaces or special characters.
+
+The model's display name is also available from the model object:
+
+
+```python
 print(model.display_name)
 ```
 
     Iris Model
 
 
-The model version is also available as a 
+The display name of a model should be a string that looks good in a user interface.
+
+The model description is also available from the model object:
+
+
+```python
+print(model.description)
+```
+
+    A model to predict the species of a flower based on its measurements.
+
+
+The model version is also available as a string from the model object:
 
 
 ```python
@@ -173,7 +207,7 @@ As you can see, we didn't implement the input_schema and output_schema propertie
 
 ## Adding Schemas to Your Model
 
-To add schema information to the model class, we'll use the pydantic package:
+To add schema information to the model class, we'll use the pydantic package. The pydantic package allows us to state the schema requirements of the model's input and output programatically as Python classes:
 
 
 ```python
@@ -368,8 +402,8 @@ another_model_manager = ModelManager()
 print(id(another_model_manager))
 ```
 
-    5054595472
-    5054595472
+    4851978496
+    4851978496
 
 
 You can add model instances to the ModelManager singleton by asking it to instantiate the model class:
