@@ -1,0 +1,12 @@
+-c requirements.txt
+pyparsing
+pytest
+pytest-html
+pytest-metadata
+coverage
+coverage-badge
+pylama
+radon
+bandit
+safety
+pytype

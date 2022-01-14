@@ -1,8 +1,10 @@
+from typing import List, Optional
 from pydantic import BaseModel, Field
-from pydantic import ValidationError
 from enum import Enum
+from datetime import datetime
 
 from ml_base.ml_model import MLModel, MLModelSchemaValidationException
+from ml_base.schemas import ModelParametersMetadata
 
 
 class ModelInput(BaseModel):
@@ -23,7 +25,7 @@ class ModelOutput(BaseModel):
 
 
 # creating an MLModel class to test with
-class MLModelMock(MLModel):
+class MLModelMockWithoutParametersMetadata(MLModel):
     # accessing the package metadata
     display_name = "display_name"
     qualified_name = "qualified_name"
@@ -35,14 +37,53 @@ class MLModelMock(MLModel):
     def __init__(self):
         pass
 
-    def predict(self, data):
-        try:
-            model_input = ModelInput(**data)
-        except ValidationError as e:
-            raise MLModelSchemaValidationException()
+    def predict(self, data: ModelInput) -> ModelOutput:
         return ModelOutput(species="Iris setosa")
 
 
-# creating a mockup class to test with
+class MLModelMockWithParametersMetadata(MLModel):
+    display_name = "display_name"
+    qualified_name = "qualified_name"
+    description = "description"
+    version = "1.0.0"
+    input_schema = ModelInput
+    output_schema = ModelOutput
+
+    @classmethod
+    def parameters(cls) -> List[ModelParametersMetadata]:
+        model_parameters_metadata = ModelParametersMetadata(
+            model_qualified_name="display_name",
+            model_version="0.1.0",
+            model_parameters_version="1",
+            description="description",
+            creation_timestamp=datetime.utcnow(),
+            author="",
+            author_email="",
+            metadata={},
+            dependencies=["", ""])
+
+        return [model_parameters_metadata]
+
+    @property
+    def parameters_metadata(self) -> Optional[ModelParametersMetadata]:
+        return ModelParametersMetadata(
+            model_qualified_name="display_name",
+            model_version="0.1.0",
+            model_parameters_version="1",
+            description="description",
+            creation_timestamp=datetime.utcnow(),
+            author="",
+            author_email="",
+            metadata={},
+            dependencies=["", ""])
+
+    def __init__(self):
+        pass
+
+    def predict(self, data: ModelInput) -> ModelOutput:
+        return ModelOutput(species="Iris setosa")
+
+
+# creating a mock class to test with
 class SomeClass(object):
     pass
