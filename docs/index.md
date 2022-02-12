@@ -21,6 +21,9 @@ model in a standardized way:
 The package also includes a ModelManager class that is able to instantiate and manage models that are created using the
 MLModel base class.
 
+The package also provides a way to create decorators that work with MLModel instances to enable more complex behavior 
+for the decorated model. Examples for MLModel decorators can be found in the examples section of this site. 
+
 # FAQ
 
 #### Why bother with base classes and interfaces? Isn't it just extra work?
@@ -39,12 +42,12 @@ to use. For example:
 
    - Deserialize model parameters from disk so that using the model is a easy as instantiating a class and calling
      predict()
-   - Validate inputs before sending them to the model
-   - Modify predictions before sending them back to the calling code
-   - Return metadata about your model
+   - Validate inputs before sending them to the model.
+   - Modify predictions before sending them back to the calling code.
+   - Return metadata about your model.
    - Convert model inputs from a developer-friendly data structure (dictionaries and lists) to a model-friendly data
-     structure (dataframes)
-   - Convert model outputs from a dataframe to a dictionary or list
+     structure (dataframes).
+   - Convert model outputs from a dataframe to a dictionary or list.
 
 #### So what do I have to do to use the base classes?
 

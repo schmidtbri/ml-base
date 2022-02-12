@@ -4,8 +4,6 @@ Category: Blog
 Slug: introducing-ml-base-package
 Authors: Brian Schmidt
 Summary: The ml_base package defines a common set of base classes that are useful for working with machine learning model prediction code. The base classes define a set of interfaces that help to write ML code that is reusable and testable. The core of the ml_base package is the MLModel class which defines a simple interface for doing machine learning model prediction. I this blog post, we'll show how to use the MLModel class.
-
-
 # Introducing the ml_base Package
 
 These examples run within an Jupyter notebook session. To clear out the results of cells that we don't want to see we'll use the clear_output() function provided by Jupyter:
@@ -275,14 +273,12 @@ class IrisModel(MLModel):
         with open(os.path.join(dir_path, "svc_model.pickle"), 'rb') as f:
             self._svm_model = pickle.load(f)
 
-    def predict(self, data: dict):
-        model_input = ModelInput(**data)
-        
+    def predict(self, data: ModelInput):
         # creating a numpy array using the fields in the input object
-        X = array([model_input.sepal_length, 
-                   model_input.sepal_width, 
-                   model_input.petal_length, 
-                   model_input.petal_width]).reshape(1, -1)
+        X = array([data.sepal_length, 
+                   data.sepal_width, 
+                   data.petal_length, 
+                   data.petal_width]).reshape(1, -1)
         
         # making a prediction, at this point its a number
         y_hat = int(self._svm_model.predict(X)[0])
@@ -304,8 +300,11 @@ If we use the model class now, we'll get this result:
 ```python
 model = IrisModel()
 
-prediction = model.predict(data={"sepal_length": 6.0, "sepal_width": 2.1, 
-                                 "petal_length": 1.2, "petal_width": 1.3})
+prediction = model.predict(ModelInput(
+    sepal_length=6.0, 
+    sepal_width=2.1, 
+    petal_length=1.2, 
+    petal_width=1.3))
 
 prediction
 ```
@@ -402,8 +401,8 @@ another_model_manager = ModelManager()
 print(id(another_model_manager))
 ```
 
-    4851978496
-    4851978496
+    4505980208
+    4505980208
 
 
 You can add model instances to the ModelManager singleton by asking it to instantiate the model class:

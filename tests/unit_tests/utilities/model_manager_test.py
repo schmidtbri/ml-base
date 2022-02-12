@@ -2,7 +2,7 @@ import unittest
 from traceback import print_tb
 
 from ml_base.utilities.model_manager import ModelManager
-from tests.mocks import MLModelMock, SomeClass
+from tests.mocks import IrisModelMock, SomeClass
 
 
 class ModelManagerTests(unittest.TestCase):
@@ -14,7 +14,7 @@ class ModelManagerTests(unittest.TestCase):
         second_model_manager = ModelManager()
 
         # loading the MLModel objects from configuration
-        first_model_manager.load_model("tests.mocks.MLModelMock")
+        first_model_manager.load_model("tests.mocks.IrisModelMock")
 
         first_model_object = first_model_manager.get_model(qualified_name="qualified_name")
         second_model_object = second_model_manager.get_model(qualified_name="qualified_name")
@@ -30,7 +30,7 @@ class ModelManagerTests(unittest.TestCase):
         # arrange
         # instantiating the model manager class twice
         first_model_manager = ModelManager()
-        first_model_manager.load_model("tests.mocks.MLModelMock")
+        first_model_manager.load_model("tests.mocks.IrisModelMock")
 
         # act
         second_model_manager = ModelManager()
@@ -47,12 +47,12 @@ class ModelManagerTests(unittest.TestCase):
         model_manager = ModelManager()
 
         # adding the model
-        model_manager.load_model("tests.mocks.MLModelMock")
+        model_manager.load_model("tests.mocks.IrisModelMock")
 
         # act
         exception_raised = False
         model_object = None
-        # accessing the MLModelMock model object
+        # accessing the IrisModelMock model object
         try:
             model_object = model_manager.get_model(qualified_name="qualified_name")
         except Exception as e:
@@ -76,7 +76,7 @@ class ModelManagerTests(unittest.TestCase):
         # adding the model
         exception_raised = False
         exception_message = None
-        # accessing the MLModelMock model object
+        # accessing the IrisModelMock model object
         try:
             model_manager.load_model("sdf.sdf.sdf")
         except Exception as e:
@@ -116,8 +116,8 @@ class ModelManagerTests(unittest.TestCase):
         """Testing that the ModelManager does not allow duplicate qualified names in the singleton."""
         # arrange
         model_manager = ModelManager()
-        model1 = MLModelMock()
-        model2 = MLModelMock()
+        model1 = IrisModelMock()
+        model2 = IrisModelMock()
 
         # act
         # loading the first instance of the model object
@@ -146,11 +146,11 @@ class ModelManagerTests(unittest.TestCase):
         model_manager = ModelManager()
 
         # adding the model
-        model_manager.load_model("tests.mocks.MLModelMock")
+        model_manager.load_model("tests.mocks.IrisModelMock")
 
         # act
         exception_raised1 = False
-        # accessing the MLModelMock model object
+        # accessing the IrisModelMock model object
         try:
             model_manager.remove_model(qualified_name="qualified_name")
         except Exception as e:
@@ -178,7 +178,7 @@ class ModelManagerTests(unittest.TestCase):
         # arrange
         model_manager = ModelManager()
 
-        model_manager.load_model("tests.mocks.MLModelMock")
+        model_manager.load_model("tests.mocks.IrisModelMock")
 
         # act
         exception_raised = False
@@ -201,7 +201,7 @@ class ModelManagerTests(unittest.TestCase):
         # arrange
         model_manager = ModelManager()
 
-        model_manager.load_model("tests.mocks.MLModelMock")
+        model_manager.load_model("tests.mocks.IrisModelMock")
 
         # act
         models = model_manager.get_models()
@@ -220,7 +220,7 @@ class ModelManagerTests(unittest.TestCase):
         # arrange
         model_manager = ModelManager()
 
-        model_manager.load_model("tests.mocks.MLModelMock")
+        model_manager.load_model("tests.mocks.IrisModelMock")
 
         # act
         model_metadata = model_manager.get_model_metadata(qualified_name="qualified_name")
@@ -241,7 +241,7 @@ class ModelManagerTests(unittest.TestCase):
         # arrange
         model_manager = ModelManager()
 
-        model_manager.load_model("tests.mocks.MLModelMock")
+        model_manager.load_model("tests.mocks.IrisModelMock")
 
         # act
         excpeption_raised = False
@@ -264,7 +264,7 @@ class ModelManagerTests(unittest.TestCase):
         # arrange
         model_manager = ModelManager()
 
-        model_manager.load_model("tests.mocks.MLModelMock")
+        model_manager.load_model("tests.mocks.IrisModelMock")
 
         # act
         exception_raised = False
@@ -276,7 +276,7 @@ class ModelManagerTests(unittest.TestCase):
 
         # assert
         self.assertFalse(exception_raised)
-        self.assertTrue(type(model) is MLModelMock)
+        self.assertTrue(type(model) is IrisModelMock)
 
         # cleanup
         model_manager.clear_instance()
@@ -286,7 +286,7 @@ class ModelManagerTests(unittest.TestCase):
         # arrange
         model_manager = ModelManager()
 
-        model_manager.load_model("tests.mocks.MLModelMock")
+        model_manager.load_model("tests.mocks.IrisModelMock")
 
         # act
         exception_raised = False

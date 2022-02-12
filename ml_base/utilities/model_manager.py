@@ -2,7 +2,7 @@
 import importlib
 from typing import List
 
-from ml_base import MLModel
+from ml_base import MLModel, MLModelDecorator
 
 
 class ModelManager(object):
@@ -77,12 +77,12 @@ class ModelManager(object):
 
         """
         # searching the list of model objects to find the one with the right qualified name
-        model_objects = [model for model in self._models if model.qualified_name == qualified_name]
+        model = next((model for model in self._models if model.qualified_name == qualified_name), None)
 
-        if len(model_objects) == 0:
+        if model is None:
             raise ValueError("Instance of model '{}' not found in ModelManager.".format(qualified_name))
         else:
-            self._models.remove(model_objects[0])
+            self._models.remove(model)
 
     def get_models(self) -> List[dict]:
         """Get a list of models in the model manager singleton.
@@ -126,19 +126,18 @@ class ModelManager(object):
 
         """
         # searching the list of model objects to find the one with the right qualified name
-        model_objects = [model for model in self._models if model.qualified_name == qualified_name]
+        model = next((model for model in self._models if model.qualified_name == qualified_name), None)
 
-        if len(model_objects) == 0:
+        if model is None:
             raise ValueError("Instance of model '{}' not found in ModelManager.".format(qualified_name))
         else:
-            model_object = model_objects[0]
             return {
-                "display_name": model_object.display_name,
-                "qualified_name": model_object.qualified_name,
-                "description": model_object.description,
-                "version": model_object.version,
-                "input_schema": model_object.input_schema.schema(),
-                "output_schema": model_object.output_schema.schema()
+                "display_name": model.display_name,
+                "qualified_name": model.qualified_name,
+                "description": model.description,
+                "version": model.version,
+                "input_schema": model.input_schema.schema(),
+                "output_schema": model.output_schema.schema()
             }
 
     def get_model(self, qualified_name: str) -> MLModel:
@@ -155,9 +154,38 @@ class ModelManager(object):
 
         """
         # searching the list of model objects to find the one with the right qualified name
-        model_objects = [model for model in self._models if model.qualified_name == qualified_name]
+        model = next((model for model in self._models if model.qualified_name == qualified_name), None)
 
-        if len(model_objects) == 0:
+        if model is None:
             raise ValueError("Instance of model '{}' not found in ModelManager.".format(qualified_name))
         else:
-            return model_objects[0]
+            return model
+
+    def add_decorator(self, qualified_name: str, decorator: MLModelDecorator) -> None:
+        """Add a decorator to a model object by qualified name.
+
+        Args:
+            qualified_name: The qualified name of the model to add decorator to.
+            decorator: MLModelDecorator instance to apply to model instance.
+
+        Returns:
+            None
+
+        Raises:
+            ValueError: Raised if a model with the qualified name can't be found in the ModelManager singleton.
+
+        """
+        # searching the list of model objects to find the one with the right qualified name
+        model = next((model for model in self._models if model.qualified_name == qualified_name), None)
+
+        if model is None:
+            raise ValueError("Instance of model '{}' not found in ModelManager.".format(qualified_name))
+
+        # removing old model reference
+        self.remove_model(qualified_name)
+
+        # adding the decorator to the model object
+        decorated_model = decorator.set_model(model)
+
+        # adding the decorated model to the collection
+        self.add_model(decorated_model)

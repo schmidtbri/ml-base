@@ -6,6 +6,10 @@ from pydantic import BaseModel
 class MLModel(ABC):
     """Base class for ML model prediction code."""
 
+    def __repr__(self):
+        """Return a string representing the model object."""
+        return self.__class__.__name__
+
     @property
     @abstractmethod
     def display_name(self) -> str:
@@ -58,7 +62,7 @@ class MLModel(ABC):
 
     @property
     @abstractmethod
-    def input_schema(self):
+    def input_schema(self) -> BaseModel:
         """Property that returns the schema that is accepted by the predict() method.
 
         Returns:
@@ -72,7 +76,7 @@ class MLModel(ABC):
 
     @property
     @abstractmethod
-    def output_schema(self):
+    def output_schema(self) -> BaseModel:
         """Property returns the schema that is returned by the predict() method.
 
         Returns:
@@ -85,7 +89,7 @@ class MLModel(ABC):
         raise NotImplementedError()
 
     @abstractmethod
-    def __init__(self):
+    def __init__(self) -> None:
         """Create an MLModel instance by adding any deserialization and initialization code for the model."""
         raise NotImplementedError()
 

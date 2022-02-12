@@ -6,7 +6,9 @@ site_description: ML Base Package Documentation
 copyright: 2021, Brian Schmidt
 nav:
     - Home: index.md
-    - Basic Example: basic.md
+    - Examples:
+      - Basic Examples: basic.md
+      - Decorator Examples: decorator.md
     - API: api.md
 markdown_extensions:
   - admonition

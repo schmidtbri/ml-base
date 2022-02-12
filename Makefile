@@ -88,4 +88,4 @@ run-examples:  ## run all example notebooks in examples directory
 	jupyter nbconvert --to notebook --execute examples/basic.ipynb
 
 convert-examples:  ## convert the example notebooks into Markdown files in docs folder
-	jupyter nbconvert --to markdown examples/basic.ipynb --output-dir='./docs'
+	jupyter nbconvert --to markdown examples/*.ipynb --output-dir='./docs'
