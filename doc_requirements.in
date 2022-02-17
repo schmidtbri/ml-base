@@ -1,0 +1,6 @@
+-c requirements.txt
+jupyter
+mkdocs
+mkdocs-material
+mkdocs-material-extensions
+mkdocstrings

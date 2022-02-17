@@ -4,10 +4,10 @@ on:
   push:
     branches:
       - '*'
-      - '!master'
+      - '!main'
   release:
     branches:
-      - master
+      - main
     types:
       - created
 
@@ -20,10 +20,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: "Set up Python 3.7"
+      - name: "Set up Python 3.9"
         uses: actions/setup-python@v2
         with:
-          python-version: 3.7
+          python-version: 3.9
 
       - name: "Update Tools"
         run: |
@@ -41,14 +41,14 @@ jobs:
         run: make build-docs
 
       - name: "Archive Documentation"
-        if: github.ref != 'refs/heads/master'
+        if: github.ref != 'refs/heads/main'
         uses: actions/upload-artifact@v1
         with:
           name: documentation
           path: site
 
       - name: "Push to gh-pages Branch"
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.SSH_PRIVATE_KEY }}

@@ -6,6 +6,10 @@ from pydantic import BaseModel
 class MLModel(ABC):
     """Base class for ML model prediction code."""
 
+    def __repr__(self):
+        """Return a string representing the model object."""
+        return self.__class__.__name__
+
     @property
     @abstractmethod
     def display_name(self) -> str:
@@ -18,7 +22,7 @@ class MLModel(ABC):
             This is a name for the model that looks good in user interfaces.
 
         """
-        raise NotImplementedError()
+        raise NotImplementedError()  # pragma: no cover
 
     @property
     @abstractmethod
@@ -32,7 +36,7 @@ class MLModel(ABC):
             A qualified name is an unambiguous identifier for the model.
 
         """
-        raise NotImplementedError()
+        raise NotImplementedError()  # pragma: no cover
 
     @property
     @abstractmethod
@@ -43,7 +47,7 @@ class MLModel(ABC):
             str: The description of the model.
 
         """
-        raise NotImplementedError()
+        raise NotImplementedError()  # pragma: no cover
 
     @property
     @abstractmethod
@@ -54,7 +58,7 @@ class MLModel(ABC):
             str: The version of the model.
 
         """
-        raise NotImplementedError()
+        raise NotImplementedError()  # pragma: no cover
 
     @property
     @abstractmethod
@@ -68,7 +72,7 @@ class MLModel(ABC):
             This property must return a subtype of pydantic.BaseModel.
 
         """
-        raise NotImplementedError()
+        raise NotImplementedError()  # pragma: no cover
 
     @property
     @abstractmethod
@@ -82,12 +86,12 @@ class MLModel(ABC):
             This property must return a subtype of pydantic.BaseModel.
 
         """
-        raise NotImplementedError()
+        raise NotImplementedError()  # pragma: no cover
 
     @abstractmethod
-    def __init__(self):
+    def __init__(self) -> None:
         """Create an MLModel instance by adding any deserialization and initialization code for the model."""
-        raise NotImplementedError()
+        raise NotImplementedError()  # pragma: no cover
 
     @abstractmethod
     def predict(self, data):
@@ -100,7 +104,7 @@ class MLModel(ABC):
             object: can be any python type
 
         """
-        raise NotImplementedError()
+        raise NotImplementedError()  # pragma: no cover
 
 
 class MLModelException(Exception):

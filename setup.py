@@ -1,27 +1,33 @@
-from os import path
+from os.path import abspath, dirname, join
 from io import open
 from setuptools import setup, find_packages
 
-from ml_base import __name__, __version__, __doc__
-
 # Get the long description from the README file
-here = path.abspath(path.dirname(__file__))
-with open(path.join(here, 'README.md'), encoding='utf-8') as f:
+here = abspath(dirname(__file__))
+
+with open(join(here, "README.md"), encoding="utf-8") as f:
     long_description = f.read()
 
+with open(join(here, "ml_base", "version.txt"), encoding="utf-8") as f:
+    version = f.read()
 
-setup(name=__name__,
-      version=__version__,
+setup(name="ml_base",
+      version=version,
       author="Brian Schmidt",
       author_email="6666331+schmidtbri@users.noreply.github.com",
-      description=__doc__,
+      description="Base classes and utilities that are useful for deploying ML models.",
       long_description=long_description,
       long_description_content_type="text/markdown",
       url="https://github.com/schmidtbri/ml-base",
       packages=find_packages(exclude=["tests", "*tests", "tests*"]),
       python_requires=">=3.5",
       install_requires=["pydantic>=1.5"],
-      tests_require=['pytest', 'pytest-html', 'pylama', 'coverage', 'coverage-badge', 'bandit', 'safety', "pytype"],
+      tests_require=["pytest", "pytest-html", "pylama", "coverage", "coverage-badge", "bandit", "safety", "pytype"],
+      package_data={
+          "ml_base": [
+                  "version.txt"
+            ]
+      },
       project_urls={
           "Documentation": "https://schmidtbri.github.io/ml-base/",
           "Code": "https://github.com/schmidtbri/ml-base",

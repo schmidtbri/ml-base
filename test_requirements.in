@@ -1,0 +1,10 @@
+-c requirements.txt
+pytest
+pytest-html
+coverage
+coverage-badge
+pylama
+radon
+bandit
+safety
+pytype

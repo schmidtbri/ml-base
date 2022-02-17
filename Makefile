@@ -36,6 +36,11 @@ test-dependencies: ## install dependencies from test_requirements.txt
 doc-dependencies: ## install dependencies from doc_requirements.txt
 	pip install -r doc_requirements.txt
 
+update-dependencies:  ## Update dependency versions
+	pip-compile requirements.in > requirements.txt
+	pip-compile test_requirements.in > test_requirements.txt
+	pip-compile test_requirements.in > test_requirements.txt
+
 clean-venv: ## remove all packages from virtual environment
 	pip freeze | grep -v "^-e" | xargs pip uninstall -y
 
@@ -88,4 +93,4 @@ run-examples:  ## run all example notebooks in examples directory
 	jupyter nbconvert --to notebook --execute examples/basic.ipynb
 
 convert-examples:  ## convert the example notebooks into Markdown files in docs folder
-	jupyter nbconvert --to markdown examples/basic.ipynb --output-dir='./docs'
+	jupyter nbconvert --to markdown examples/*.ipynb --output-dir='./docs'
