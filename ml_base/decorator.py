@@ -38,6 +38,9 @@ class MLModelDecorator(MLModel):
 
     def set_model(self, model: MLModel) -> "MLModelDecorator":
         """Set a model in the decorator instance."""
+        if not isinstance(model, MLModel):
+            raise ValueError("Only objects of type MLModel can be wrapped with MLModelDecorator instances.")
+
         self.__dict__["_model"] = model
         return self
 
@@ -68,7 +71,7 @@ class MLModelDecorator(MLModel):
             model that is being decorated.
 
         """
-        return self.__dict__["_model"].display_name
+        return getattr(self, "_model").display_name
 
     @property
     def qualified_name(self) -> str:
@@ -79,7 +82,7 @@ class MLModelDecorator(MLModel):
             model that is being decorated.
 
         """
-        return self.__dict__["_model"].qualified_name
+        return getattr(self, "_model").qualified_name
 
     @property
     def description(self) -> str:
@@ -90,7 +93,7 @@ class MLModelDecorator(MLModel):
             model that is being decorated.
 
         """
-        return self.__dict__["_model"].description
+        return getattr(self, "_model").description
 
     @property
     def version(self) -> str:
@@ -102,7 +105,7 @@ class MLModelDecorator(MLModel):
 
 
         """
-        return self.__dict__["_model"].version
+        return getattr(self, "_model").version
 
     @property
     def input_schema(self):
@@ -113,7 +116,7 @@ class MLModelDecorator(MLModel):
             model that is being decorated.
 
         """
-        return self.__dict__["_model"].input_schema
+        return getattr(self, "_model").input_schema
 
     @property
     def output_schema(self):
@@ -124,7 +127,7 @@ class MLModelDecorator(MLModel):
             model that is being decorated.
 
         """
-        return self.__dict__["_model"].output_schema
+        return getattr(self, "_model").output_schema
 
     def predict(self, data):
         """Predict with the model.
@@ -140,4 +143,4 @@ class MLModelDecorator(MLModel):
             model that is being decorated and returns the result.
 
         """
-        return self.__dict__["_model"].predict(data=data)
+        return getattr(self, "_model").predict(data=data)

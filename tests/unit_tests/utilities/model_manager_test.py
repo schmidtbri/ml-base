@@ -2,7 +2,7 @@ import unittest
 from traceback import print_tb
 
 from ml_base.utilities.model_manager import ModelManager
-from tests.mocks import IrisModelMock, SomeClass
+from tests.mocks import SomeClass, IrisModelMock, SimpleDecorator
 
 
 class ModelManagerTests(unittest.TestCase):
@@ -67,7 +67,6 @@ class ModelManagerTests(unittest.TestCase):
         model_manager.clear_instance()
 
     def test_load_model_method_with_wrong_class_path(self):
-        """Testing the load_model() method."""
         # arrange
         # instantiating the model manager class
         model_manager = ModelManager()
@@ -91,7 +90,6 @@ class ModelManagerTests(unittest.TestCase):
         model_manager.clear_instance()
 
     def test_only_ml_model_instances_allowed_to_be_stored(self):
-        """Testing that the ModelManager only allows MLModel objects to be stored."""
         # arrange
         model_manager = ModelManager()
         some_object = SomeClass()
@@ -113,7 +111,6 @@ class ModelManagerTests(unittest.TestCase):
         model_manager.clear_instance()
 
     def test_model_manager_does_not_allow_duplicate_qualified_names(self):
-        """Testing that the ModelManager does not allow duplicate qualified names in the singleton."""
         # arrange
         model_manager = ModelManager()
         model1 = IrisModelMock()
@@ -140,7 +137,6 @@ class ModelManagerTests(unittest.TestCase):
         model_manager.clear_instance()
 
     def test_remove_model_method(self):
-        """Testing the remove_model() method."""
         # arrange
         # instantiating the model manager class
         model_manager = ModelManager()
@@ -174,7 +170,6 @@ class ModelManagerTests(unittest.TestCase):
         model_manager.clear_instance()
 
     def test_remove_model_method_with_missing_model(self):
-        """Testing that the ModelManager raises ValueError exception when removing a model that is not found."""
         # arrange
         model_manager = ModelManager()
 
@@ -197,7 +192,6 @@ class ModelManagerTests(unittest.TestCase):
         model_manager.clear_instance()
 
     def test_get_models_method(self):
-        """Testing get_models method."""
         # arrange
         model_manager = ModelManager()
 
@@ -216,7 +210,6 @@ class ModelManagerTests(unittest.TestCase):
         model_manager.clear_instance()
 
     def test_get_model_metadata_method(self):
-        """Testing get_model_metadata method."""
         # arrange
         model_manager = ModelManager()
 
@@ -237,7 +230,6 @@ class ModelManagerTests(unittest.TestCase):
         model_manager.clear_instance()
 
     def test_get_model_metadata_method_with_missing_model(self):
-        """Testing get_model_metadata method with missing model."""
         # arrange
         model_manager = ModelManager()
 
@@ -260,7 +252,6 @@ class ModelManagerTests(unittest.TestCase):
         model_manager.clear_instance()
 
     def test_get_model_method(self):
-        """Testing the get_model method."""
         # arrange
         model_manager = ModelManager()
 
@@ -282,7 +273,6 @@ class ModelManagerTests(unittest.TestCase):
         model_manager.clear_instance()
 
     def test_get_model_method_with_missing_model(self):
-        """Testing that the ModelManager raises ValueError exception when a model is not found."""
         # arrange
         model_manager = ModelManager()
 
@@ -301,6 +291,40 @@ class ModelManagerTests(unittest.TestCase):
         # assert
         self.assertTrue(exception_raised)
         self.assertTrue(exception_message == "Instance of model 'asdf' not found in ModelManager.")
+
+        # cleanup
+        model_manager.clear_instance()
+
+    def test_add_decorator_method(self):
+        # arrange
+        model_manager = ModelManager()
+
+        model_manager.load_model("tests.mocks.IrisModelMock")
+
+        decorator = SimpleDecorator()
+
+        # act
+        model_manager.add_decorator("qualified_name", decorator)
+
+        model = model_manager.get_model("qualified_name")
+
+        # assert
+        self.assertTrue(str(model) == "SimpleDecorator(IrisModelMock)")
+
+        # cleanup
+        model_manager.clear_instance()
+
+    def test_add_decorator_method_with_missing_model(self):
+        # arrange
+        model_manager = ModelManager()
+
+        model_manager.load_model("tests.mocks.IrisModelMock")
+
+        decorator = SimpleDecorator()
+
+        # act, assert
+        with self.assertRaises(ValueError) as context:
+            model_manager.add_decorator("asdf", decorator)
 
         # cleanup
         model_manager.clear_instance()

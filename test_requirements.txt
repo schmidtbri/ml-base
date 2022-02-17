@@ -12,7 +12,7 @@ bandit==1.7.2
     # via -r test_requirements.in
 certifi==2021.10.8
     # via requests
-charset-normalizer==2.0.11
+charset-normalizer==2.0.12
     # via requests
 click==8.0.3
     # via safety
@@ -71,7 +71,7 @@ pylama==8.3.7
     # via -r test_requirements.in
 pyparsing==3.0.7
     # via packaging
-pytest==7.0.0
+pytest==7.0.1
     # via
     #   -r test_requirements.in
     #   pytest-html
@@ -80,7 +80,7 @@ pytest-html==3.1.1
     # via -r test_requirements.in
 pytest-metadata==1.11.0
     # via pytest-html
-pytype==2022.1.31
+pytype==2022.2.8
     # via -r test_requirements.in
 pyyaml==6.0
     # via
@@ -109,8 +109,9 @@ toml==0.10.2
     #   pytype
 tomli==2.0.1
     # via pytest
-typing-extensions==4.0.1
+typing-extensions==4.1.1
     # via
+    #   -c requirements.txt
     #   libcst
     #   typing-inspect
 typing-inspect==0.7.1

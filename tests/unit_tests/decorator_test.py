@@ -8,7 +8,6 @@ from tests.mocks import SomeClass, IrisModelMock, IrisModelMockThatRaisesExcepti
 class DecoratorTests(unittest.TestCase):
 
     def test_str_method(self):
-        """Test that the __str__ method of a decorator works."""
         # arrange
         model = IrisModelMock()
         decorator1 = SimpleDecorator(model=model)
@@ -21,7 +20,6 @@ class DecoratorTests(unittest.TestCase):
         self.assertTrue(string == "AddStringDecorator(SimpleDecorator(IrisModelMock))")
 
     def test_dynamic_attribute_access(self):
-        """Test that all attributes of MLModel object can be accessed through decorators."""
         # arrange
         model = IrisModelMock()
         decorator = SimpleDecorator(model=model)
@@ -46,7 +44,6 @@ class DecoratorTests(unittest.TestCase):
         self.assertTrue("new_attribute" not in model.__dict__)
 
     def test_decorating_an_object_that_is_not_of_type_ml_model(self):
-        """Testing decorating an object that is not of type MLModel."""
         # arrange
         model = SomeClass()
 
@@ -54,8 +51,27 @@ class DecoratorTests(unittest.TestCase):
         with self.assertRaises(ValueError) as context:
             decorator = SimpleDecorator(model=model)
 
+    def test_set_model_method(self):
+        # arrange
+        model = IrisModelMock()
+        decorator = SimpleDecorator()
+
+        # act
+        decorator.set_model(model)
+
+        # assert
+        self.assertTrue(decorator._model == model)
+
+    def test_set_model_method_with_object_of_wrong_type(self):
+        # arrange
+        model = SomeClass()
+        decorator = SimpleDecorator()
+
+        # act, assert
+        with self.assertRaises(ValueError) as context:
+            decorator.set_model(model)
+
     def test_with_simple_decorator(self):
-        """Testing that the SimpleDecorator class works."""
         # arrange
         model = IrisModelMock()
         decorator = SimpleDecorator(model=model)
@@ -82,7 +98,6 @@ class DecoratorTests(unittest.TestCase):
         self.assertTrue(type(prediction) is ModelOutput)
 
     def test_with_add_string_decorator(self):
-        """Testing that the AddStringDecorator class works."""
         # arrange
         model = IrisModelMock()
         decorator = AddStringDecorator(model=model, string=" test")
@@ -109,7 +124,6 @@ class DecoratorTests(unittest.TestCase):
         self.assertTrue(type(prediction) is ModelOutput)
 
     def test_with_catch_exception_decorator(self):
-        """Testing that the CatchExceptionsDecorator class works."""
         # arrange
         model = IrisModelMockThatRaisesException()
         decorator = CatchExceptionsDecorator(model=model)
@@ -130,7 +144,6 @@ class DecoratorTests(unittest.TestCase):
         self.assertTrue(decorator.output_schema == ModelOutput)
 
     def test_with_modify_schema_decorator(self):
-        """Testing that modifying the schema of a model is possible in a decorator."""
         # arrange
         model = IrisModelMock()
         decorator = ModifySchemaDecorator(model=model)
@@ -145,7 +158,6 @@ class DecoratorTests(unittest.TestCase):
         p = decorator.input_schema(**data)
 
     def test_is_instance_check_works_correctly(self):
-        """Testing that a decorator will pass the isinstance check as a subtype of MLModel."""
         # arrange
         model = IrisModelMock()
         decorator = ModifySchemaDecorator(model=model)
