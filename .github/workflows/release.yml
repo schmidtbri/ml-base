@@ -34,7 +34,7 @@ jobs:
         echo "${SOURCE_TAG:1}" > ml_base/version.txt
 
     - name: "Build and Publish to Test PyPi"
-      if: github.ref != 'refs/heads/main'
+      if: !contains(github.ref, "main")
       env:
         TWINE_USERNAME: __token__
         TWINE_PASSWORD: ${{ secrets.TEST_PYPI_PASSWORD }}
@@ -44,7 +44,7 @@ jobs:
         twine upload dist/*
 
     - name: "Build and Publish to PyPi"
-      if: github.ref == 'refs/heads/main'
+      if: contains(github.ref, "main")
       env:
         TWINE_USERNAME: __token__
         TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
