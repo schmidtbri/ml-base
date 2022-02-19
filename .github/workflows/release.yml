@@ -6,13 +6,9 @@ on:
       - created
 
 jobs:
-
   release:
-
     runs-on: ubuntu-latest
-
     steps:
-
     - uses: actions/checkout@v2
 
     - name: "Set up Python 3.9"
@@ -36,32 +32,26 @@ jobs:
     - name: "Build Package"
       run: make build
 
+    - name: Get branch names
+      id: branch-name
+      uses: tj-actions/branch-names@v5.1
+
     - name: "Publish to Test PyPi"
+      if: steps.branch-name.outputs.ref_branch != 'main'
       env:
         TWINE_USERNAME: __token__
         TWINE_PASSWORD: ${{ secrets.TEST_PYPI_PASSWORD }}
         TWINE_REPOSITORY_URL: https://test.pypi.org/legacy/
       run: |
-        BRANCH_NAME="${GITHUB_REF#refs/heads/}"
-        echo $BRANCH_NAME
-        if [ $BRANCH_NAME != "main" ];
-        then
-          twine upload dist/*
-        else
-          echo "Not uploading to Test PyPi because we're in the main branch."
-        fi
+        echo "${{ steps.branch-name.outputs.ref_branch }}"
+        twine upload dist/*
 
     - name: "Build and Publish to PyPi"
+      if: steps.branch-name.outputs.ref_branch == 'main'
       env:
         TWINE_USERNAME: __token__
         TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
         TWINE_REPOSITORY_URL: https://upload.pypi.org/legacy/
       run: |
-        BRANCH_NAME="${GITHUB_REF#refs/heads/}"
-        echo $BRANCH_NAME
-        if [ $BRANCH_NAME == "main" ];
-        then
-          twine upload dist/*
-        else
-          echo "Not uploading to PyPi because we're not in the main branch."
-        fi
+        echo "${{ steps.branch-name.outputs.ref_branch }}"
+        twine upload dist/*
