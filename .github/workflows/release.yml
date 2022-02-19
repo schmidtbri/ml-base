@@ -43,6 +43,7 @@ jobs:
         TWINE_REPOSITORY_URL: https://test.pypi.org/legacy/
       run: |
         BRANCH_NAME="${GITHUB_REF#refs/heads/}"
+        echo $BRANCH_NAME
         if [ $BRANCH_NAME != "main" ];
         then
           twine upload dist/*
@@ -57,6 +58,7 @@ jobs:
         TWINE_REPOSITORY_URL: https://upload.pypi.org/legacy/
       run: |
         BRANCH_NAME="${GITHUB_REF#refs/heads/}"
+        echo $BRANCH_NAME
         if [ $BRANCH_NAME == "main" ];
         then
           twine upload dist/*
