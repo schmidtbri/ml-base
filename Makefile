@@ -39,7 +39,7 @@ doc-dependencies: ## install dependencies from doc_requirements.txt
 update-dependencies:  ## Update dependency versions
 	pip-compile requirements.in > requirements.txt
 	pip-compile test_requirements.in > test_requirements.txt
-	pip-compile test_requirements.in > test_requirements.txt
+	pip-compile doc_requirements.in > doc_requirements.txt
 
 clean-venv: ## remove all packages from virtual environment
 	pip freeze | grep -v "^-e" | xargs pip uninstall -y
