@@ -10,9 +10,8 @@
       
       
       
-      
-      <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.7">
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.10">
     
     
       
@@ -20,10 +19,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.cb6bc1d0.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.d6be258b.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
@@ -33,19 +32,16 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../css/ansi-colours.css">
-    
-      <link rel="stylesheet" href="../css/jupyter-cells.css">
-    
-      <link rel="stylesheet" href="../css/pandas-dataframe.css">
-    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+
     
     
   </head>
@@ -57,8 +53,8 @@
     
     
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
-      
   
+    
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -75,27 +71,28 @@
       
     </div>
     
+    
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href=".." title="ML Base" class="md-header-nav__button md-logo" aria-label="ML Base">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ML Base" class="md-header__button md-logo" aria-label="ML Base" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
-    <label class="md-header-nav__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
-    <div class="md-header-nav__title" data-md-component="header-title">
-      <div class="md-header-nav__ellipsis">
-        <div class="md-header-nav__topic">
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
           <span class="md-ellipsis">
             ML Base
           </span>
         </div>
-        <div class="md-header-nav__topic">
+        <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
               API
@@ -105,22 +102,27 @@
       </div>
     </div>
     
-      <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -136,12 +138,11 @@
 </div>
     
     
-      <div class="md-header-nav__source">
-        
-<a href="https://github.com/schmidtbri/ml-base/" title="Go to repository" class="md-source">
+      <div class="md-header__source">
+        <a href="https://github.com/schmidtbri/ml-base/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -150,11 +151,14 @@
       </div>
     
   </nav>
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
+        
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -162,31 +166,28 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 
 
-
-
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="ML Base" class="md-nav__button md-logo" aria-label="ML Base">
+    <a href=".." title="ML Base" class="md-nav__button md-logo" aria-label="ML Base" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
     ML Base
   </label>
   
     <div class="md-nav__source">
-      
-<a href="https://github.com/schmidtbri/ml-base/" title="Go to repository" class="md-source">
+      <a href="https://github.com/schmidtbri/ml-base/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -218,10 +219,57 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Examples
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Examples" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../examples/" class="md-nav__link">
-        Examples
+      <a href="../basic/" class="md-nav__link">
+        Basic Examples
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../decorator/" class="md-nav__link">
+        Decorator Examples
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -239,6 +287,7 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+      
         
       
       
@@ -252,7 +301,9 @@
       </a>
       
         
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
@@ -262,7 +313,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#base-classes" class="md-nav__link">
@@ -336,6 +387,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ml_base.ml_model.MLModel.__repr__" class="md-nav__link">
+    __repr__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ml_base.ml_model.MLModel.predict" class="md-nav__link">
     predict()
   </a>
@@ -388,6 +446,117 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ml_base.decorator" class="md-nav__link">
+    ml_base.decorator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ml_base.decorator.MLModelDecorator" class="md-nav__link">
+    MLModelDecorator
+  </a>
+  
+    <nav class="md-nav" aria-label="MLModelDecorator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ml_base.decorator.MLModelDecorator.description" class="md-nav__link">
+    description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ml_base.decorator.MLModelDecorator.display_name" class="md-nav__link">
+    display_name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ml_base.decorator.MLModelDecorator.input_schema" class="md-nav__link">
+    input_schema
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ml_base.decorator.MLModelDecorator.output_schema" class="md-nav__link">
+    output_schema
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ml_base.decorator.MLModelDecorator.qualified_name" class="md-nav__link">
+    qualified_name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ml_base.decorator.MLModelDecorator.version" class="md-nav__link">
+    version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ml_base.decorator.MLModelDecorator.__delattr__" class="md-nav__link">
+    __delattr__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ml_base.decorator.MLModelDecorator.__getattr__" class="md-nav__link">
+    __getattr__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ml_base.decorator.MLModelDecorator.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ml_base.decorator.MLModelDecorator.__repr__" class="md-nav__link">
+    __repr__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ml_base.decorator.MLModelDecorator.__setattr__" class="md-nav__link">
+    __setattr__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ml_base.decorator.MLModelDecorator.predict" class="md-nav__link">
+    predict()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ml_base.decorator.MLModelDecorator.set_model" class="md-nav__link">
+    set_model()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#utilities" class="md-nav__link">
     Utilities
   </a>
@@ -411,6 +580,13 @@
         <li class="md-nav__item">
   <a href="#ml_base.utilities.model_manager.ModelManager.__new__" class="md-nav__link">
     __new__()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ml_base.utilities.model_manager.ModelManager.add_decorator" class="md-nav__link">
+    add_decorator()
   </a>
   
 </li>
@@ -480,11 +656,13 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
@@ -494,7 +672,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#base-classes" class="md-nav__link">
@@ -568,6 +746,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ml_base.ml_model.MLModel.__repr__" class="md-nav__link">
+    __repr__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ml_base.ml_model.MLModel.predict" class="md-nav__link">
     predict()
   </a>
@@ -620,6 +805,117 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ml_base.decorator" class="md-nav__link">
+    ml_base.decorator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ml_base.decorator.MLModelDecorator" class="md-nav__link">
+    MLModelDecorator
+  </a>
+  
+    <nav class="md-nav" aria-label="MLModelDecorator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ml_base.decorator.MLModelDecorator.description" class="md-nav__link">
+    description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ml_base.decorator.MLModelDecorator.display_name" class="md-nav__link">
+    display_name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ml_base.decorator.MLModelDecorator.input_schema" class="md-nav__link">
+    input_schema
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ml_base.decorator.MLModelDecorator.output_schema" class="md-nav__link">
+    output_schema
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ml_base.decorator.MLModelDecorator.qualified_name" class="md-nav__link">
+    qualified_name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ml_base.decorator.MLModelDecorator.version" class="md-nav__link">
+    version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ml_base.decorator.MLModelDecorator.__delattr__" class="md-nav__link">
+    __delattr__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ml_base.decorator.MLModelDecorator.__getattr__" class="md-nav__link">
+    __getattr__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ml_base.decorator.MLModelDecorator.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ml_base.decorator.MLModelDecorator.__repr__" class="md-nav__link">
+    __repr__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ml_base.decorator.MLModelDecorator.__setattr__" class="md-nav__link">
+    __setattr__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ml_base.decorator.MLModelDecorator.predict" class="md-nav__link">
+    predict()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ml_base.decorator.MLModelDecorator.set_model" class="md-nav__link">
+    set_model()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#utilities" class="md-nav__link">
     Utilities
   </a>
@@ -643,6 +939,13 @@
         <li class="md-nav__item">
   <a href="#ml_base.utilities.model_manager.ModelManager.__new__" class="md-nav__link">
     __new__()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ml_base.utilities.model_manager.ModelManager.add_decorator" class="md-nav__link">
+    add_decorator()
   </a>
   
 </li>
@@ -704,37 +1007,174 @@
               </div>
             
           
-          <div class="md-content">
+          <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/schmidtbri/ml-base/edit/master/docs/api.md" title="Edit this page" class="md-content__button md-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-                  </a>
-                
-                
-                <h1 id="api-documentation">API documentation</h1>
+<a href="https://github.com/schmidtbri/ml-base/edit/master/docs/api.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<h1 id="api-documentation">API documentation</h1>
 <h2 id="base-classes">Base Classes</h2>
-<div class="doc doc-object doc-module">
-<h2 class="hidden-toc" id="ml_base.ml_model" style="visibility: hidden; position: absolute;">
-        </h2>
-<div class="doc doc-contents first">
-<p>Base class for building ML models that are easy to deploy and integrate.</p>
-<div class="doc doc-children">
-<div class="doc doc-object doc-class">
-<h2 class="doc doc-heading" id="ml_base.ml_model.MLModel">
 
-        <code>MLModel</code>
+
+  <div class="doc doc-object doc-module">
+
+<a id="ml_base.ml_model"></a>
+    <div class="doc doc-contents first">
+
+      <p>Base class for building ML models that are easy to deploy and integrate.</p>
 
 
 
-      </h2>
-<div class="doc doc-contents ">
-<p>Base class for ML model prediction code.</p>
-<div class="doc doc-children">
-<div class="doc doc-object doc-attribute">
-<h3 class="doc doc-heading" id="ml_base.ml_model.MLModel.description">
+  <div class="doc doc-children">
 
+
+
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h2 id="ml_base.ml_model.MLModel" class="doc doc-heading">
+        <code>
+MLModel            (<span title="abc.ABC">ABC</span>)
+        </code>
+
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Base class for ML model prediction code.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>ml_base/ml_model.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MLModel</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Base class for ML model prediction code.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return a string representing the model object.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span>
+
+    <span class="nd">@property</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">display_name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Abstract property that returns a display name for the model.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The display name of the model.</span>
+
+<span class="sd">        !!! note</span>
+<span class="sd">            This is a name for the model that looks good in user interfaces.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>  <span class="c1"># pragma: no cover</span>
+
+    <span class="nd">@property</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">qualified_name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Abstract property that returns the qualified name of the model.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The qualified name of the model.</span>
+
+<span class="sd">        !!! warning</span>
+<span class="sd">            A qualified name is an unambiguous identifier for the model.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>  <span class="c1"># pragma: no cover</span>
+
+    <span class="nd">@property</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">description</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Abstract property that returns a description of the model.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The description of the model.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>  <span class="c1"># pragma: no cover</span>
+
+    <span class="nd">@property</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">version</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Abstract property that returns the model&#39;s version as a string.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The version of the model.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>  <span class="c1"># pragma: no cover</span>
+
+    <span class="nd">@property</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">input_schema</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Property that returns the schema that is accepted by the predict() method.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            pydantic.BaseModel: The input schema of the model.</span>
+
+<span class="sd">        !!! note</span>
+<span class="sd">            This property must return a subtype of pydantic.BaseModel.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>  <span class="c1"># pragma: no cover</span>
+
+    <span class="nd">@property</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">output_schema</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Property returns the schema that is returned by the predict() method.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            pydantic.BaseModel: The output schema of the model.</span>
+
+<span class="sd">        !!! note</span>
+<span class="sd">            This property must return a subtype of pydantic.BaseModel.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>  <span class="c1"># pragma: no cover</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Create an MLModel instance by adding any deserialization and initialization code for the model.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>  <span class="c1"># pragma: no cover</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Prediction with the model.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data: data used by the model for making a prediction</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            object: can be any python type</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>  <span class="c1"># pragma: no cover</span>
+</code></pre></div>
+        </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ml_base.ml_model.MLModel.description" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">description</span><span class="p">:</span> <span class="nb">str</span></code>
 
   <span class="doc doc-properties">
@@ -742,31 +1182,37 @@
       <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
   </span>
 
-      </h3>
-<div class="doc doc-contents ">
-<p>Abstract property that returns a description of the model.</p>
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Abstract property that returns a description of the model.</p>
+
 <p><strong>Returns:</strong></p>
 <table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>str</code></td>
-<td>
-<p>str: The description of the model.</p>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="doc doc-object doc-attribute">
-<h3 class="doc doc-heading" id="ml_base.ml_model.MLModel.display_name">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>str</code></td>
+      <td><p>The description of the model.</p></td>
+    </tr>
+  </tbody>
+</table>    </div>
 
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ml_base.ml_model.MLModel.display_name" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">display_name</span><span class="p">:</span> <span class="nb">str</span></code>
 
   <span class="doc doc-properties">
@@ -774,35 +1220,41 @@
       <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
   </span>
 
-      </h3>
-<div class="doc doc-contents ">
-<p>Abstract property that returns a display name for the model.</p>
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Abstract property that returns a display name for the model.</p>
+
 <p><strong>Returns:</strong></p>
 <table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>str</code></td>
-<td>
-<p>str: The display name of the model.</p>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>str</code></td>
+      <td><p>The display name of the model.</p></td>
+    </tr>
+  </tbody>
+</table>      <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is a name for the model that looks good in user interfaces.</p>
 </div>
-</div>
-</div>
-<div class="doc doc-object doc-attribute">
-<h3 class="doc doc-heading" id="ml_base.ml_model.MLModel.input_schema">
+    </div>
 
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ml_base.ml_model.MLModel.input_schema" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">input_schema</span></code>
 
   <span class="doc doc-properties">
@@ -810,35 +1262,41 @@
       <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
   </span>
 
-      </h3>
-<div class="doc doc-contents ">
-<p>Property that returns the schema that is accepted by the predict() method.</p>
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Property that returns the schema that is accepted by the predict() method.</p>
+
 <p><strong>Returns:</strong></p>
 <table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>pydantic.BaseModel</code></td>
-<td>
-<p>The input schema of the model.</p>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>pydantic.BaseModel</code></td>
+      <td><p>The input schema of the model.</p></td>
+    </tr>
+  </tbody>
+</table>      <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This property must return a subtype of pydantic.BaseModel.</p>
 </div>
-</div>
-</div>
-<div class="doc doc-object doc-attribute">
-<h3 class="doc doc-heading" id="ml_base.ml_model.MLModel.output_schema">
+    </div>
 
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ml_base.ml_model.MLModel.output_schema" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">output_schema</span></code>
 
   <span class="doc doc-properties">
@@ -846,35 +1304,41 @@
       <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
   </span>
 
-      </h3>
-<div class="doc doc-contents ">
-<p>Property returns the schema that is returned by the predict() method.</p>
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Property returns the schema that is returned by the predict() method.</p>
+
 <p><strong>Returns:</strong></p>
 <table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>pydantic.BaseModel</code></td>
-<td>
-<p>The output schema of the model.</p>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>pydantic.BaseModel</code></td>
+      <td><p>The output schema of the model.</p></td>
+    </tr>
+  </tbody>
+</table>      <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This property must return a subtype of pydantic.BaseModel.</p>
 </div>
-</div>
-</div>
-<div class="doc doc-object doc-attribute">
-<h3 class="doc doc-heading" id="ml_base.ml_model.MLModel.qualified_name">
+    </div>
 
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ml_base.ml_model.MLModel.qualified_name" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">qualified_name</span><span class="p">:</span> <span class="nb">str</span></code>
 
   <span class="doc doc-properties">
@@ -882,35 +1346,41 @@
       <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
   </span>
 
-      </h3>
-<div class="doc doc-contents ">
-<p>Abstract property that returns the qualified name of the model.</p>
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Abstract property that returns the qualified name of the model.</p>
+
 <p><strong>Returns:</strong></p>
 <table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>str</code></td>
-<td>
-<p>str: The qualified name of the model.</p>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition warning">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>str</code></td>
+      <td><p>The qualified name of the model.</p></td>
+    </tr>
+  </tbody>
+</table>      <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>A qualified name is an unambiguous identifier for the model.</p>
 </div>
-</div>
-</div>
-<div class="doc doc-object doc-attribute">
-<h3 class="doc doc-heading" id="ml_base.ml_model.MLModel.version">
+    </div>
 
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ml_base.ml_model.MLModel.version" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">version</span><span class="p">:</span> <span class="nb">str</span></code>
 
   <span class="doc doc-properties">
@@ -918,105 +1388,149 @@
       <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
   </span>
 
-      </h3>
-<div class="doc doc-contents ">
-<p>Abstract property that returns the model's version as a string.</p>
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Abstract property that returns the model's version as a string.</p>
+
 <p><strong>Returns:</strong></p>
 <table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>str</code></td>
-<td>
-<p>str: The version of the model.</p>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="doc doc-object doc-method">
-<h3 class="doc doc-heading" id="ml_base.ml_model.MLModel.__init__">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>str</code></td>
+      <td><p>The version of the model.</p></td>
+    </tr>
+  </tbody>
+</table>    </div>
 
+  </div>
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="ml_base.ml_model.MLModel.__init__" class="doc doc-heading">
 <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
   <span class="doc doc-properties">
       <small class="doc doc-property doc-property-special"><code>special</code></small>
   </span>
 
-      </h3>
-<div class="doc doc-contents ">
-<p>Create an MLModel instance by adding any deserialization and initialization code for the model.</p>
-<details class="quote">
-          <summary>Source code in <code>ml_base/ml_model.py</code></summary>
-          <div class="highlight">
-<pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="sd">"""Create an MLModel instance by adding any deserialization and initialization code for the model."""</span>
-    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
-</code></pre>
-</div>
-</details>
-</div>
-</div>
-<div class="doc doc-object doc-method">
-<h3 class="doc doc-heading" id="ml_base.ml_model.MLModel.predict">
+</h3>
 
+    <div class="doc doc-contents ">
+
+      <p>Create an MLModel instance by adding any deserialization and initialization code for the model.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>ml_base/ml_model.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@abstractmethod</span>
+<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Create an MLModel instance by adding any deserialization and initialization code for the model.&quot;&quot;&quot;</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>  <span class="c1"># pragma: no cover</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="ml_base.ml_model.MLModel.__repr__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Return a string representing the model object.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>ml_base/ml_model.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return a string representing the model object.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="ml_base.ml_model.MLModel.predict" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span></code>
 
 
-      </h3>
-<div class="doc doc-contents ">
-<p>Prediction with the model.</p>
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Prediction with the model.</p>
+
 <p><strong>Parameters:</strong></p>
 <table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>data</code></td>
-<td><code></code></td>
-<td>
-<p>data used by the model for making a prediction</p>
-</td>
-<td><em>required</em></td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>data</code></td>
+        <td></td>
+        <td><p>data used by the model for making a prediction</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
 </table>
 <p><strong>Returns:</strong></p>
 <table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>object</code></td>
-<td>
-<p>can be any python type</p>
-</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>object</code></td>
+      <td><p>can be any python type</p></td>
+    </tr>
+  </tbody>
 </table>
-<details class="quote">
+        <details class="quote">
           <summary>Source code in <code>ml_base/ml_model.py</code></summary>
-          <div class="highlight">
-<pre><span></span><code><span class="nd">@abstractmethod</span>
+          <div class="highlight"><pre><span></span><code><span class="nd">@abstractmethod</span>
 <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-    <span class="sd">"""Prediction with the model.</span>
+    <span class="sd">&quot;&quot;&quot;Prediction with the model.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        data: data used by the model for making a prediction</span>
@@ -1024,128 +1538,1119 @@
 <span class="sd">    Returns:</span>
 <span class="sd">        object: can be any python type</span>
 
-<span class="sd">    """</span>
-    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
-</code></pre>
-</div>
-</details>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="doc doc-object doc-class">
-<h2 class="doc doc-heading" id="ml_base.ml_model.MLModelException">
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>  <span class="c1"># pragma: no cover</span>
+</code></pre></div>
+        </details>
+    </div>
 
-        <code>MLModelException</code>
+  </div>
 
 
 
-      </h2>
-<div class="doc doc-contents ">
-<p>Exception base class used to raise exceptions within MLModel derived classes.</p>
-<div class="doc doc-children">
-<div class="doc doc-object doc-method">
-<h3 class="doc doc-heading" id="ml_base.ml_model.MLModelException.__init__">
 
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h2 id="ml_base.ml_model.MLModelException" class="doc doc-heading">
+        <code>
+MLModelException            (<span title="Exception">Exception</span>)
+        </code>
+
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Exception base class used to raise exceptions within MLModel derived classes.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>ml_base/ml_model.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MLModelException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Exception base class used to raise exceptions within MLModel derived classes.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialize MLModelException instance.&quot;&quot;&quot;</span>
+        <span class="ne">Exception</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="ml_base.ml_model.MLModelException.__init__" class="doc doc-heading">
 <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
 
   <span class="doc doc-properties">
       <small class="doc doc-property doc-property-special"><code>special</code></small>
   </span>
 
-      </h3>
-<div class="doc doc-contents ">
-<p>Initialize MLModelException instance.</p>
-<details class="quote">
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Initialize MLModelException instance.</p>
+
+        <details class="quote">
           <summary>Source code in <code>ml_base/ml_model.py</code></summary>
-          <div class="highlight">
-<pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
-    <span class="sd">"""Initialize MLModelException instance."""</span>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Initialize MLModelException instance.&quot;&quot;&quot;</span>
     <span class="ne">Exception</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
-</code></pre>
-</div>
-</details>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="doc doc-object doc-class">
-<h2 class="doc doc-heading" id="ml_base.ml_model.MLModelSchemaValidationException">
+</code></pre></div>
+        </details>
+    </div>
 
-        <code>MLModelSchemaValidationException</code>
+  </div>
 
 
 
-      </h2>
-<div class="doc doc-contents ">
-<p>Exception type used to raise schema validation exceptions within MLModel derived classes.</p>
-<div class="doc doc-children">
-<div class="doc doc-object doc-method">
-<h3 class="doc doc-heading" id="ml_base.ml_model.MLModelSchemaValidationException.__init__">
 
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h2 id="ml_base.ml_model.MLModelSchemaValidationException" class="doc doc-heading">
+        <code>
+MLModelSchemaValidationException            (<a title="ml_base.ml_model.MLModelException" href="#ml_base.ml_model.MLModelException">MLModelException</a>)
+        </code>
+
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Exception type used to raise schema validation exceptions within MLModel derived classes.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>ml_base/ml_model.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MLModelSchemaValidationException</span><span class="p">(</span><span class="n">MLModelException</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Exception type used to raise schema validation exceptions within MLModel derived classes.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialize MLModelSchemaValidationException instance.&quot;&quot;&quot;</span>
+        <span class="n">MLModelException</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="ml_base.ml_model.MLModelSchemaValidationException.__init__" class="doc doc-heading">
 <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
 
   <span class="doc doc-properties">
       <small class="doc doc-property doc-property-special"><code>special</code></small>
   </span>
 
-      </h3>
-<div class="doc doc-contents ">
-<p>Initialize MLModelSchemaValidationException instance.</p>
-<details class="quote">
-          <summary>Source code in <code>ml_base/ml_model.py</code></summary>
-          <div class="highlight">
-<pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
-    <span class="sd">"""Initialize MLModelSchemaValidationException instance."""</span>
-    <span class="n">MLModelException</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
-</code></pre>
-</div>
-</details>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<h2 id="utilities">Utilities</h2>
-<div class="doc doc-object doc-class">
-<h2 class="hidden-toc" id="ml_base.utilities.model_manager.ModelManager" style="visibility: hidden; position: absolute;">
-        </h2>
-<div class="doc doc-contents first">
-<p>Singleton class that instantiates and manages model objects.</p>
-<div class="doc doc-children">
-<div class="doc doc-object doc-method">
-<h2 class="doc doc-heading" id="ml_base.utilities.model_manager.ModelManager.__init__">
+</h3>
 
+    <div class="doc doc-contents ">
+
+      <p>Initialize MLModelSchemaValidationException instance.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>ml_base/ml_model.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Initialize MLModelSchemaValidationException instance.&quot;&quot;&quot;</span>
+    <span class="n">MLModelException</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-module">
+
+<a id="ml_base.decorator"></a>
+    <div class="doc doc-contents first">
+
+      <p>Base class for building decorators for MLModel objects.</p>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h2 id="ml_base.decorator.MLModelDecorator" class="doc doc-heading">
+        <code>
+MLModelDecorator            (<a title="ml_base.ml_model.MLModel" href="#ml_base.ml_model.MLModel">MLModel</a>)
+        </code>
+
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Base class for ML model decorator code.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default behavior of the MLModelDecorator base class is to do nothing and to forward the method call to
+the model that is is wrapping. Any subtypes of MLModelDecorator that would like to add on to the behavior
+of the model needs to override the default implementations in the MLModelDecorator base class.</p>
+</div>
+
+        <details class="quote">
+          <summary>Source code in <code>ml_base/decorator.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MLModelDecorator</span><span class="p">(</span><span class="n">MLModel</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Base class for ML model decorator code.</span>
+
+<span class="sd">    !!! note</span>
+<span class="sd">        The default behavior of the MLModelDecorator base class is to do nothing and to forward the method call to</span>
+<span class="sd">        the model that is is wrapping. Any subtypes of MLModelDecorator that would like to add on to the behavior</span>
+<span class="sd">        of the model needs to override the default implementations in the MLModelDecorator base class.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_decorator_attributes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;_model&quot;</span><span class="p">,</span> <span class="s2">&quot;_configuration&quot;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">MLModel</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialize MLModelDecorator instance.</span>
+
+<span class="sd">        !!! note</span>
+<span class="sd">            The MLModel parameter is optional and does not need to be provided at initialization of the decorator</span>
+<span class="sd">            instance.</span>
+
+<span class="sd">        !!! note</span>
+<span class="sd">            This method receives the model instance and stores the reference.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">model</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">MLModel</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Only objects of type MLModel can be wrapped with MLModelDecorator instances.&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s2">&quot;_model&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span>
+        <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s2">&quot;_configuration&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwargs</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return a string describing the decorator and the model that it is decorating.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">(</span><span class="si">{}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s2">&quot;_model&quot;</span><span class="p">]))</span>
+
+    <span class="k">def</span> <span class="nf">set_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">MLModel</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;MLModelDecorator&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Set a model in the decorator instance.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">MLModel</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Only objects of type MLModel can be wrapped with MLModelDecorator instances.&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s2">&quot;_model&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="fm">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get an attribute.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">MLModelDecorator</span><span class="o">.</span><span class="n">_decorator_attributes</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s2">&quot;_model&quot;</span><span class="p">],</span> <span class="n">name</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__setattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set an attribute.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">MLModelDecorator</span><span class="o">.</span><span class="n">_decorator_attributes</span><span class="p">:</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s2">&quot;_model&quot;</span><span class="p">],</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__delattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Delete an attribute.&quot;&quot;&quot;</span>
+        <span class="nb">delattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s2">&quot;_model&quot;</span><span class="p">],</span> <span class="n">name</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">display_name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Property that returns a display name for the model.</span>
+
+<span class="sd">        !!! note</span>
+<span class="sd">            Unless this method is overridden, the implementation just returns the display_name property of the</span>
+<span class="sd">            model that is being decorated.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;_model&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">display_name</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">qualified_name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Property that returns the qualified name of the model.</span>
+
+<span class="sd">        !!! note</span>
+<span class="sd">            Unless this method is overridden, the implementation just returns the qualified_name property of the</span>
+<span class="sd">            model that is being decorated.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;_model&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">qualified_name</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">description</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Property that returns a description of the model.</span>
+
+<span class="sd">        !!! note</span>
+<span class="sd">            Unless this method is overridden, the implementation just returns the description property of the</span>
+<span class="sd">            model that is being decorated.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;_model&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">description</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">version</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Property that returns the model&#39;s version as a string.</span>
+
+<span class="sd">        !!! note</span>
+<span class="sd">            Unless this method is overridden, the implementation just returns the version property of the</span>
+<span class="sd">            model that is being decorated.</span>
+
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;_model&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">version</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">input_schema</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Property that returns the schema that is accepted by the predict() method.</span>
+
+<span class="sd">        !!! note</span>
+<span class="sd">            Unless this method is overridden, the implementation just returns the input_schema property of the</span>
+<span class="sd">            model that is being decorated.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;_model&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">input_schema</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">output_schema</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Property returns the schema that is returned by the predict() method.</span>
+
+<span class="sd">        !!! note</span>
+<span class="sd">            Unless this method is overridden, the implementation just returns the output_schema property of the</span>
+<span class="sd">            model that is being decorated.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;_model&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">output_schema</span>
+
+    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Predict with the model.</span>
+
+<span class="sd">        Params:</span>
+<span class="sd">            data: Data used by the model for making a prediction.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            python object -- can be any python type</span>
+
+<span class="sd">        !!! note</span>
+<span class="sd">            Unless this method is overridden, the implementation just calls the predict method of the</span>
+<span class="sd">            model that is being decorated and returns the result.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;_model&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ml_base.decorator.MLModelDecorator.description" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">description</span><span class="p">:</span> <span class="nb">str</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Property that returns a description of the model.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Unless this method is overridden, the implementation just returns the description property of the
+model that is being decorated.</p>
+</div>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ml_base.decorator.MLModelDecorator.display_name" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">display_name</span><span class="p">:</span> <span class="nb">str</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Property that returns a display name for the model.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Unless this method is overridden, the implementation just returns the display_name property of the
+model that is being decorated.</p>
+</div>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ml_base.decorator.MLModelDecorator.input_schema" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">input_schema</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Property that returns the schema that is accepted by the predict() method.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Unless this method is overridden, the implementation just returns the input_schema property of the
+model that is being decorated.</p>
+</div>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ml_base.decorator.MLModelDecorator.output_schema" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">output_schema</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Property returns the schema that is returned by the predict() method.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Unless this method is overridden, the implementation just returns the output_schema property of the
+model that is being decorated.</p>
+</div>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ml_base.decorator.MLModelDecorator.qualified_name" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">qualified_name</span><span class="p">:</span> <span class="nb">str</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Property that returns the qualified name of the model.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Unless this method is overridden, the implementation just returns the qualified_name property of the
+model that is being decorated.</p>
+</div>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ml_base.decorator.MLModelDecorator.version" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">version</span><span class="p">:</span> <span class="nb">str</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Property that returns the model's version as a string.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Unless this method is overridden, the implementation just returns the version property of the
+model that is being decorated.</p>
+</div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="ml_base.decorator.MLModelDecorator.__delattr__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__delattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Delete an attribute.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>ml_base/decorator.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__delattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Delete an attribute.&quot;&quot;&quot;</span>
+    <span class="nb">delattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s2">&quot;_model&quot;</span><span class="p">],</span> <span class="n">name</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="ml_base.decorator.MLModelDecorator.__getattr__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Get an attribute.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>ml_base/decorator.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Get an attribute.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">MLModelDecorator</span><span class="o">.</span><span class="n">_decorator_attributes</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s2">&quot;_model&quot;</span><span class="p">],</span> <span class="n">name</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="ml_base.decorator.MLModelDecorator.__init__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Initialize MLModelDecorator instance.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The MLModel parameter is optional and does not need to be provided at initialization of the decorator
+instance.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method receives the model instance and stores the reference.</p>
+</div>
+
+        <details class="quote">
+          <summary>Source code in <code>ml_base/decorator.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">MLModel</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Initialize MLModelDecorator instance.</span>
+
+<span class="sd">    !!! note</span>
+<span class="sd">        The MLModel parameter is optional and does not need to be provided at initialization of the decorator</span>
+<span class="sd">        instance.</span>
+
+<span class="sd">    !!! note</span>
+<span class="sd">        This method receives the model instance and stores the reference.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">model</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">MLModel</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Only objects of type MLModel can be wrapped with MLModelDecorator instances.&quot;</span><span class="p">)</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s2">&quot;_model&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span>
+    <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s2">&quot;_configuration&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwargs</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="ml_base.decorator.MLModelDecorator.__repr__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Return a string describing the decorator and the model that it is decorating.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>ml_base/decorator.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return a string describing the decorator and the model that it is decorating.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">(</span><span class="si">{}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s2">&quot;_model&quot;</span><span class="p">]))</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="ml_base.decorator.MLModelDecorator.__setattr__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__setattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Set an attribute.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>ml_base/decorator.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__setattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Set an attribute.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">MLModelDecorator</span><span class="o">.</span><span class="n">_decorator_attributes</span><span class="p">:</span>
+        <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s2">&quot;_model&quot;</span><span class="p">],</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="ml_base.decorator.MLModelDecorator.predict" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span></code>
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Predict with the model.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>data</code></td>
+        <td></td>
+        <td><p>Data used by the model for making a prediction.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td>
+      <td><p>python object -- can be any python type</p></td>
+    </tr>
+  </tbody>
+</table>      <div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Unless this method is overridden, the implementation just calls the predict method of the
+model that is being decorated and returns the result.</p>
+</div>
+
+        <details class="quote">
+          <summary>Source code in <code>ml_base/decorator.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Predict with the model.</span>
+
+<span class="sd">    Params:</span>
+<span class="sd">        data: Data used by the model for making a prediction.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        python object -- can be any python type</span>
+
+<span class="sd">    !!! note</span>
+<span class="sd">        Unless this method is overridden, the implementation just calls the predict method of the</span>
+<span class="sd">        model that is being decorated and returns the result.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;_model&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="ml_base.decorator.MLModelDecorator.set_model" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">set_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span></code>
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Set a model in the decorator instance.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>ml_base/decorator.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">set_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">MLModel</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;MLModelDecorator&quot;</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Set a model in the decorator instance.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">MLModel</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Only objects of type MLModel can be wrapped with MLModelDecorator instances.&quot;</span><span class="p">)</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s2">&quot;_model&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span>
+    <span class="k">return</span> <span class="bp">self</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+<h2 id="utilities">Utilities</h2>
+
+
+  <div class="doc doc-object doc-class">
+
+<a id="ml_base.utilities.model_manager.ModelManager"></a>
+    <div class="doc doc-contents first">
+
+      <p>Singleton class that instantiates and manages model objects.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>ml_base/utilities/model_manager.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ModelManager</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Singleton class that instantiates and manages model objects.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>  <span class="c1"># noqa: D102</span>
+        <span class="sd">&quot;&quot;&quot;Create and return a new ModelManager instance, after instance is first created it will always be returned.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s2">&quot;_instance&quot;</span><span class="p">):</span>
+            <span class="bp">cls</span><span class="o">.</span><span class="n">_instance</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">ModelManager</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
+            <span class="bp">cls</span><span class="o">.</span><span class="n">_instance</span><span class="o">.</span><span class="n">_is_initialized</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_instance</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Construct ModelManager object.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_initialized</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>  <span class="c1"># pytype: disable=attribute-error</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_models</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_is_initialized</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">clear_instance</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Clear singleton instance from class.&quot;&quot;&quot;</span>
+        <span class="k">del</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_instance</span>
+
+    <span class="k">def</span> <span class="nf">load_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">class_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Import and instantiate an MLModel object from a class path.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            class_path: Class path to the model&#39;s MLModel class.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: Raised if the model is not a subtype of MLModel, or if a model with the same qualified name</span>
+<span class="sd">                      is already loaded in the ModelManager.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># splitting the class_path into module path and class name</span>
+        <span class="n">module_path</span> <span class="o">=</span> <span class="s2">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">class_path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">class_name</span> <span class="o">=</span> <span class="n">class_path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="c1"># importing the model class</span>
+        <span class="n">model_module</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">module_path</span><span class="p">)</span>
+        <span class="n">model_class</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">model_module</span><span class="p">,</span> <span class="n">class_name</span><span class="p">)</span>
+
+        <span class="c1"># instantiating the model object from the class</span>
+        <span class="n">model_object</span> <span class="o">=</span> <span class="n">model_class</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_model</span><span class="p">(</span><span class="n">model_object</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">add_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">MLModel</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Add a model to the ModelManager.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            model: instance of MLModel</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">MLModel</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;ModelManager instance can only hold references to objects of type MLModel.&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">model</span><span class="o">.</span><span class="n">qualified_name</span> <span class="ow">in</span> <span class="p">[</span><span class="n">model</span><span class="o">.</span><span class="n">qualified_name</span> <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;A model with the same qualified name is already in the ModelManager singleton.&quot;</span><span class="p">)</span>
+
+        <span class="c1"># saving the model reference to the models list</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">remove_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qualified_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Remove an MLModel object from the ModelManager singleton.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            qualified_name: The qualified name of the model to be returned.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: Raised if a model with the qualified name can&#39;t be found in the ModelManager singleton.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># searching the list of model objects to find the one with the right qualified name</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">model</span> <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span> <span class="k">if</span> <span class="n">model</span><span class="o">.</span><span class="n">qualified_name</span> <span class="o">==</span> <span class="n">qualified_name</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">model</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Instance of model &#39;</span><span class="si">{}</span><span class="s2">&#39; not found in ModelManager.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">qualified_name</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_models</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">dict</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;Get a list of models in the model manager singleton.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            List of dictionaries containing information about the model instances in the ModelManager singleton.</span>
+
+<span class="sd">        !!! note</span>
+<span class="sd">            The dictionaries in the list returned by this method contain these keys:</span>
+
+<span class="sd">            - display_name</span>
+<span class="sd">            - qualified_name</span>
+<span class="sd">            - description</span>
+<span class="sd">            - version</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">model_objects</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">display_name</span><span class="p">,</span>
+                          <span class="s2">&quot;qualified_name&quot;</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">qualified_name</span><span class="p">,</span>
+                          <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">description</span><span class="p">,</span>
+                          <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">version</span><span class="p">}</span> <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">model_objects</span>
+
+    <span class="k">def</span> <span class="nf">get_model_metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qualified_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Get model metadata by qualified name.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            qualified_name: Qualified name of the model for which to get metadata</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Dictionary containing information about a model in the ModelManager singleton.</span>
+
+<span class="sd">        !!! note</span>
+<span class="sd">            The dictionaries in the list returned by this method contain these keys:</span>
+
+<span class="sd">            - display_name</span>
+<span class="sd">            - qualified_name</span>
+<span class="sd">            - description</span>
+<span class="sd">            - version</span>
+<span class="sd">            - input_schema</span>
+<span class="sd">            - output_schema</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># searching the list of model objects to find the one with the right qualified name</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">model</span> <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span> <span class="k">if</span> <span class="n">model</span><span class="o">.</span><span class="n">qualified_name</span> <span class="o">==</span> <span class="n">qualified_name</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">model</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Instance of model &#39;</span><span class="si">{}</span><span class="s2">&#39; not found in ModelManager.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">qualified_name</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">display_name</span><span class="p">,</span>
+                <span class="s2">&quot;qualified_name&quot;</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">qualified_name</span><span class="p">,</span>
+                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">description</span><span class="p">,</span>
+                <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">version</span><span class="p">,</span>
+                <span class="s2">&quot;input_schema&quot;</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">input_schema</span><span class="o">.</span><span class="n">schema</span><span class="p">(),</span>
+                <span class="s2">&quot;output_schema&quot;</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">output_schema</span><span class="o">.</span><span class="n">schema</span><span class="p">()</span>
+            <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">get_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qualified_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MLModel</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Get a model object by qualified name.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            qualified_name: The qualified name of the model to be returned.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Model object</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: Raised if a model with the qualified name can&#39;t be found in the ModelManager singleton.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># searching the list of model objects to find the one with the right qualified name</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">model</span> <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span> <span class="k">if</span> <span class="n">model</span><span class="o">.</span><span class="n">qualified_name</span> <span class="o">==</span> <span class="n">qualified_name</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">model</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Instance of model &#39;</span><span class="si">{}</span><span class="s2">&#39; not found in ModelManager.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">qualified_name</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">model</span>
+
+    <span class="k">def</span> <span class="nf">add_decorator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qualified_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">decorator</span><span class="p">:</span> <span class="n">MLModelDecorator</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Add a decorator to a model object by qualified name.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            qualified_name: The qualified name of the model to add decorator to.</span>
+<span class="sd">            decorator: MLModelDecorator instance to apply to model instance.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            None</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: Raised if a model with the qualified name can&#39;t be found in the ModelManager singleton.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># searching the list of model objects to find the one with the right qualified name</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">model</span> <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span> <span class="k">if</span> <span class="n">model</span><span class="o">.</span><span class="n">qualified_name</span> <span class="o">==</span> <span class="n">qualified_name</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">model</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Instance of model &#39;</span><span class="si">{}</span><span class="s2">&#39; not found in ModelManager.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">qualified_name</span><span class="p">))</span>
+
+        <span class="c1"># removing old model reference</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">remove_model</span><span class="p">(</span><span class="n">qualified_name</span><span class="p">)</span>
+
+        <span class="c1"># adding the decorator to the model object</span>
+        <span class="n">decorated_model</span> <span class="o">=</span> <span class="n">decorator</span><span class="o">.</span><span class="n">set_model</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+
+        <span class="c1"># adding the decorated model to the collection</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_model</span><span class="p">(</span><span class="n">decorated_model</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="ml_base.utilities.model_manager.ModelManager.__init__" class="doc doc-heading">
 <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
   <span class="doc doc-properties">
       <small class="doc doc-property doc-property-special"><code>special</code></small>
   </span>
 
-      </h2>
-<div class="doc doc-contents ">
-<p>Construct ModelManager object.</p>
-<details class="quote">
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Construct ModelManager object.</p>
+
+        <details class="quote">
           <summary>Source code in <code>ml_base/utilities/model_manager.py</code></summary>
-          <div class="highlight">
-<pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="sd">"""Construct ModelManager object."""</span>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Construct ModelManager object.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_initialized</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>  <span class="c1"># pytype: disable=attribute-error</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_models</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_is_initialized</span> <span class="o">=</span> <span class="kc">True</span>
-</code></pre>
-</div>
-</details>
-</div>
-</div>
-<div class="doc doc-object doc-method">
-<h2 class="doc doc-heading" id="ml_base.utilities.model_manager.ModelManager.__new__">
+</code></pre></div>
+        </details>
+    </div>
 
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="ml_base.utilities.model_manager.ModelManager.__new__" class="doc doc-heading">
 <code class="highlight language-python"><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span></code>
 
   <span class="doc doc-properties">
@@ -1153,169 +2658,291 @@
       <small class="doc doc-property doc-property-staticmethod"><code>staticmethod</code></small>
   </span>
 
-      </h2>
-<div class="doc doc-contents ">
-<p>Create and return a new ModelManager instance, after instance is first created it will always be returned.</p>
-<details class="quote">
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Create and return a new ModelManager instance, after instance is first created it will always be returned.</p>
+
+        <details class="quote">
           <summary>Source code in <code>ml_base/utilities/model_manager.py</code></summary>
-          <div class="highlight">
-<pre><span></span><code><span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>  <span class="c1"># noqa: D102</span>
-    <span class="sd">"""Create and return a new ModelManager instance, after instance is first created it will always be returned."""</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s2">"_instance"</span><span class="p">):</span>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>  <span class="c1"># noqa: D102</span>
+    <span class="sd">&quot;&quot;&quot;Create and return a new ModelManager instance, after instance is first created it will always be returned.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s2">&quot;_instance&quot;</span><span class="p">):</span>
         <span class="bp">cls</span><span class="o">.</span><span class="n">_instance</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">ModelManager</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
         <span class="bp">cls</span><span class="o">.</span><span class="n">_instance</span><span class="o">.</span><span class="n">_is_initialized</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_instance</span>
-</code></pre>
-</div>
-</details>
-</div>
-</div>
-<div class="doc doc-object doc-method">
-<h2 class="doc doc-heading" id="ml_base.utilities.model_manager.ModelManager.add_model">
+</code></pre></div>
+        </details>
+    </div>
 
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="ml_base.utilities.model_manager.ModelManager.add_decorator" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_decorator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qualified_name</span><span class="p">,</span> <span class="n">decorator</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Add a decorator to a model object by qualified name.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>qualified_name</code></td>
+        <td><code>str</code></td>
+        <td><p>The qualified name of the model to add decorator to.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>decorator</code></td>
+        <td><code>MLModelDecorator</code></td>
+        <td><p>MLModelDecorator instance to apply to model instance.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>None</code></td>
+      <td><p>None</p></td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>ValueError</code></td>
+        <td><p>Raised if a model with the qualified name can't be found in the ModelManager singleton.</p></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>ml_base/utilities/model_manager.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">add_decorator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qualified_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">decorator</span><span class="p">:</span> <span class="n">MLModelDecorator</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Add a decorator to a model object by qualified name.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        qualified_name: The qualified name of the model to add decorator to.</span>
+<span class="sd">        decorator: MLModelDecorator instance to apply to model instance.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        None</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: Raised if a model with the qualified name can&#39;t be found in the ModelManager singleton.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># searching the list of model objects to find the one with the right qualified name</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">model</span> <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span> <span class="k">if</span> <span class="n">model</span><span class="o">.</span><span class="n">qualified_name</span> <span class="o">==</span> <span class="n">qualified_name</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">model</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Instance of model &#39;</span><span class="si">{}</span><span class="s2">&#39; not found in ModelManager.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">qualified_name</span><span class="p">))</span>
+
+    <span class="c1"># removing old model reference</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">remove_model</span><span class="p">(</span><span class="n">qualified_name</span><span class="p">)</span>
+
+    <span class="c1"># adding the decorator to the model object</span>
+    <span class="n">decorated_model</span> <span class="o">=</span> <span class="n">decorator</span><span class="o">.</span><span class="n">set_model</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+
+    <span class="c1"># adding the decorated model to the collection</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">add_model</span><span class="p">(</span><span class="n">decorated_model</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="ml_base.utilities.model_manager.ModelManager.add_model" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">add_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span></code>
 
 
-      </h2>
-<div class="doc doc-contents ">
-<p>Add a model to the ModelManager.</p>
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Add a model to the ModelManager.</p>
+
 <p><strong>Parameters:</strong></p>
 <table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>model</code></td>
-<td><code>MLModel</code></td>
-<td>
-<p>instance of MLModel</p>
-</td>
-<td><em>required</em></td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>model</code></td>
+        <td><code>MLModel</code></td>
+        <td><p>instance of MLModel</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
 </table>
-<details class="quote">
+        <details class="quote">
           <summary>Source code in <code>ml_base/utilities/model_manager.py</code></summary>
-          <div class="highlight">
-<pre><span></span><code><span class="k">def</span> <span class="nf">add_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">MLModel</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">"""Add a model to the ModelManager.</span>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">add_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">MLModel</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Add a model to the ModelManager.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        model: instance of MLModel</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">MLModel</span><span class="p">):</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"ModelManager instance can only hold references to objects of type MLModel."</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;ModelManager instance can only hold references to objects of type MLModel.&quot;</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">model</span><span class="o">.</span><span class="n">qualified_name</span> <span class="ow">in</span> <span class="p">[</span><span class="n">model</span><span class="o">.</span><span class="n">qualified_name</span> <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">]:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"A model with the same qualified name is already in the ModelManager singleton."</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;A model with the same qualified name is already in the ModelManager singleton.&quot;</span><span class="p">)</span>
 
     <span class="c1"># saving the model reference to the models list</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
-</code></pre>
-</div>
-</details>
-</div>
-</div>
-<div class="doc doc-object doc-method">
-<h2 class="doc doc-heading" id="ml_base.utilities.model_manager.ModelManager.clear_instance">
+</code></pre></div>
+        </details>
+    </div>
 
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="ml_base.utilities.model_manager.ModelManager.clear_instance" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">clear_instance</span><span class="p">()</span></code>
 
   <span class="doc doc-properties">
       <small class="doc doc-property doc-property-classmethod"><code>classmethod</code></small>
   </span>
 
-      </h2>
-<div class="doc doc-contents ">
-<p>Clear singleton instance from class.</p>
-<details class="quote">
-          <summary>Source code in <code>ml_base/utilities/model_manager.py</code></summary>
-          <div class="highlight">
-<pre><span></span><code><span class="nd">@classmethod</span>
-<span class="k">def</span> <span class="nf">clear_instance</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
-    <span class="sd">"""Clear singleton instance from class."""</span>
-    <span class="k">del</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_instance</span>
-</code></pre>
-</div>
-</details>
-</div>
-</div>
-<div class="doc doc-object doc-method">
-<h2 class="doc doc-heading" id="ml_base.utilities.model_manager.ModelManager.get_model">
+</h2>
 
+    <div class="doc doc-contents ">
+
+      <p>Clear singleton instance from class.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>ml_base/utilities/model_manager.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@classmethod</span>
+<span class="k">def</span> <span class="nf">clear_instance</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Clear singleton instance from class.&quot;&quot;&quot;</span>
+    <span class="k">del</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_instance</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="ml_base.utilities.model_manager.ModelManager.get_model" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">get_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qualified_name</span><span class="p">)</span></code>
 
 
-      </h2>
-<div class="doc doc-contents ">
-<p>Get a model object by qualified name.</p>
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Get a model object by qualified name.</p>
+
 <p><strong>Parameters:</strong></p>
 <table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>qualified_name</code></td>
-<td><code>str</code></td>
-<td>
-<p>The qualified name of the model to be returned.</p>
-</td>
-<td><em>required</em></td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>qualified_name</code></td>
+        <td><code>str</code></td>
+        <td><p>The qualified name of the model to be returned.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
 </table>
 <p><strong>Returns:</strong></p>
 <table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>MLModel</code></td>
-<td>
-<p>Model object</p>
-</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>MLModel</code></td>
+      <td><p>Model object</p></td>
+    </tr>
+  </tbody>
 </table>
 <p><strong>Exceptions:</strong></p>
 <table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ValueError</code></td>
-<td>
-<p>Raised if a model with the qualified name can't be found in the ModelManager singleton.</p>
-</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>ValueError</code></td>
+        <td><p>Raised if a model with the qualified name can't be found in the ModelManager singleton.</p></td>
+      </tr>
+  </tbody>
 </table>
-<details class="quote">
+        <details class="quote">
           <summary>Source code in <code>ml_base/utilities/model_manager.py</code></summary>
-          <div class="highlight">
-<pre><span></span><code><span class="k">def</span> <span class="nf">get_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qualified_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MLModel</span><span class="p">:</span>
-    <span class="sd">"""Get a model object by qualified name.</span>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qualified_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MLModel</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Get a model object by qualified name.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        qualified_name: The qualified name of the model to be returned.</span>
@@ -1324,69 +2951,72 @@
 <span class="sd">        Model object</span>
 
 <span class="sd">    Raises:</span>
-<span class="sd">        ValueError: Raised if a model with the qualified name can't be found in the ModelManager singleton.</span>
+<span class="sd">        ValueError: Raised if a model with the qualified name can&#39;t be found in the ModelManager singleton.</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># searching the list of model objects to find the one with the right qualified name</span>
-    <span class="n">model_objects</span> <span class="o">=</span> <span class="p">[</span><span class="n">model</span> <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span> <span class="k">if</span> <span class="n">model</span><span class="o">.</span><span class="n">qualified_name</span> <span class="o">==</span> <span class="n">qualified_name</span><span class="p">]</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">model</span> <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span> <span class="k">if</span> <span class="n">model</span><span class="o">.</span><span class="n">qualified_name</span> <span class="o">==</span> <span class="n">qualified_name</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">model_objects</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Instance of model '</span><span class="si">{}</span><span class="s2">' not found in ModelManager."</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">qualified_name</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">model</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Instance of model &#39;</span><span class="si">{}</span><span class="s2">&#39; not found in ModelManager.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">qualified_name</span><span class="p">))</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">model_objects</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</code></pre>
-</div>
-</details>
-</div>
-</div>
-<div class="doc doc-object doc-method">
-<h2 class="doc doc-heading" id="ml_base.utilities.model_manager.ModelManager.get_model_metadata">
+        <span class="k">return</span> <span class="n">model</span>
+</code></pre></div>
+        </details>
+    </div>
 
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="ml_base.utilities.model_manager.ModelManager.get_model_metadata" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">get_model_metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qualified_name</span><span class="p">)</span></code>
 
 
-      </h2>
-<div class="doc doc-contents ">
-<p>Get model metadata by qualified name.</p>
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Get model metadata by qualified name.</p>
+
 <p><strong>Parameters:</strong></p>
 <table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>qualified_name</code></td>
-<td><code>str</code></td>
-<td>
-<p>Qualified name of the model for which to get metadata</p>
-</td>
-<td><em>required</em></td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>qualified_name</code></td>
+        <td><code>str</code></td>
+        <td><p>Qualified name of the model for which to get metadata</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
 </table>
 <p><strong>Returns:</strong></p>
 <table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>dict</code></td>
-<td>
-<p>Dictionary containing information about a model in the ModelManager singleton.</p>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>dict</code></td>
+      <td><p>Dictionary containing information about a model in the ModelManager singleton.</p></td>
+    </tr>
+  </tbody>
+</table>      <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The dictionaries in the list returned by this method contain these keys:</p>
 <ul>
@@ -1398,11 +3028,11 @@
 <li>output_schema</li>
 </ul>
 </div>
-<details class="quote">
+
+        <details class="quote">
           <summary>Source code in <code>ml_base/utilities/model_manager.py</code></summary>
-          <div class="highlight">
-<pre><span></span><code><span class="k">def</span> <span class="nf">get_model_metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qualified_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
-    <span class="sd">"""Get model metadata by qualified name.</span>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_model_metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qualified_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Get model metadata by qualified name.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        qualified_name: Qualified name of the model for which to get metadata</span>
@@ -1420,54 +3050,58 @@
 <span class="sd">        - input_schema</span>
 <span class="sd">        - output_schema</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># searching the list of model objects to find the one with the right qualified name</span>
-    <span class="n">model_objects</span> <span class="o">=</span> <span class="p">[</span><span class="n">model</span> <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span> <span class="k">if</span> <span class="n">model</span><span class="o">.</span><span class="n">qualified_name</span> <span class="o">==</span> <span class="n">qualified_name</span><span class="p">]</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">model</span> <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span> <span class="k">if</span> <span class="n">model</span><span class="o">.</span><span class="n">qualified_name</span> <span class="o">==</span> <span class="n">qualified_name</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">model_objects</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Instance of model '</span><span class="si">{}</span><span class="s2">' not found in ModelManager."</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">qualified_name</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">model</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Instance of model &#39;</span><span class="si">{}</span><span class="s2">&#39; not found in ModelManager.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">qualified_name</span><span class="p">))</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">model_object</span> <span class="o">=</span> <span class="n">model_objects</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="k">return</span> <span class="p">{</span>
-            <span class="s2">"display_name"</span><span class="p">:</span> <span class="n">model_object</span><span class="o">.</span><span class="n">display_name</span><span class="p">,</span>
-            <span class="s2">"qualified_name"</span><span class="p">:</span> <span class="n">model_object</span><span class="o">.</span><span class="n">qualified_name</span><span class="p">,</span>
-            <span class="s2">"description"</span><span class="p">:</span> <span class="n">model_object</span><span class="o">.</span><span class="n">description</span><span class="p">,</span>
-            <span class="s2">"version"</span><span class="p">:</span> <span class="n">model_object</span><span class="o">.</span><span class="n">version</span><span class="p">,</span>
-            <span class="s2">"input_schema"</span><span class="p">:</span> <span class="n">model_object</span><span class="o">.</span><span class="n">input_schema</span><span class="o">.</span><span class="n">schema</span><span class="p">(),</span>
-            <span class="s2">"output_schema"</span><span class="p">:</span> <span class="n">model_object</span><span class="o">.</span><span class="n">output_schema</span><span class="o">.</span><span class="n">schema</span><span class="p">()</span>
+            <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">display_name</span><span class="p">,</span>
+            <span class="s2">&quot;qualified_name&quot;</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">qualified_name</span><span class="p">,</span>
+            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">description</span><span class="p">,</span>
+            <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">version</span><span class="p">,</span>
+            <span class="s2">&quot;input_schema&quot;</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">input_schema</span><span class="o">.</span><span class="n">schema</span><span class="p">(),</span>
+            <span class="s2">&quot;output_schema&quot;</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">output_schema</span><span class="o">.</span><span class="n">schema</span><span class="p">()</span>
         <span class="p">}</span>
-</code></pre>
-</div>
-</details>
-</div>
-</div>
-<div class="doc doc-object doc-method">
-<h2 class="doc doc-heading" id="ml_base.utilities.model_manager.ModelManager.get_models">
+</code></pre></div>
+        </details>
+    </div>
 
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="ml_base.utilities.model_manager.ModelManager.get_models" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">get_models</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-      </h2>
-<div class="doc doc-contents ">
-<p>Get a list of models in the model manager singleton.</p>
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Get a list of models in the model manager singleton.</p>
+
 <p><strong>Returns:</strong></p>
 <table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>List[dict]</code></td>
-<td>
-<p>List of dictionaries containing information about the model instances in the ModelManager singleton.</p>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>List[dict]</code></td>
+      <td><p>List of dictionaries containing information about the model instances in the ModelManager singleton.</p></td>
+    </tr>
+  </tbody>
+</table>      <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The dictionaries in the list returned by this method contain these keys:</p>
 <ul>
@@ -1477,11 +3111,11 @@
 <li>version</li>
 </ul>
 </div>
-<details class="quote">
+
+        <details class="quote">
           <summary>Source code in <code>ml_base/utilities/model_manager.py</code></summary>
-          <div class="highlight">
-<pre><span></span><code><span class="k">def</span> <span class="nf">get_models</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">dict</span><span class="p">]:</span>
-    <span class="sd">"""Get a list of models in the model manager singleton.</span>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_models</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">dict</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Get a list of models in the model manager singleton.</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        List of dictionaries containing information about the model instances in the ModelManager singleton.</span>
@@ -1494,82 +3128,85 @@
 <span class="sd">        - description</span>
 <span class="sd">        - version</span>
 
-<span class="sd">    """</span>
-    <span class="n">model_objects</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">"display_name"</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">display_name</span><span class="p">,</span>
-                      <span class="s2">"qualified_name"</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">qualified_name</span><span class="p">,</span>
-                      <span class="s2">"description"</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">description</span><span class="p">,</span>
-                      <span class="s2">"version"</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">version</span><span class="p">}</span> <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">model_objects</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">display_name</span><span class="p">,</span>
+                      <span class="s2">&quot;qualified_name&quot;</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">qualified_name</span><span class="p">,</span>
+                      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">description</span><span class="p">,</span>
+                      <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">version</span><span class="p">}</span> <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">model_objects</span>
-</code></pre>
-</div>
-</details>
-</div>
-</div>
-<div class="doc doc-object doc-method">
-<h2 class="doc doc-heading" id="ml_base.utilities.model_manager.ModelManager.load_model">
+</code></pre></div>
+        </details>
+    </div>
 
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="ml_base.utilities.model_manager.ModelManager.load_model" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">load_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">class_path</span><span class="p">)</span></code>
 
 
-      </h2>
-<div class="doc doc-contents ">
-<p>Import and instantiate an MLModel object from a class path.</p>
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Import and instantiate an MLModel object from a class path.</p>
+
 <p><strong>Parameters:</strong></p>
 <table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>class_path</code></td>
-<td><code>str</code></td>
-<td>
-<p>Class path to the model's MLModel class.</p>
-</td>
-<td><em>required</em></td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>class_path</code></td>
+        <td><code>str</code></td>
+        <td><p>Class path to the model's MLModel class.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
 </table>
 <p><strong>Exceptions:</strong></p>
 <table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ValueError</code></td>
-<td>
-<p>Raised if the model is not a subtype of MLModel, or if a model with the same qualified name
-      is already loaded in the ModelManager.</p>
-</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>ValueError</code></td>
+        <td><p>Raised if the model is not a subtype of MLModel, or if a model with the same qualified name
+      is already loaded in the ModelManager.</p></td>
+      </tr>
+  </tbody>
 </table>
-<details class="quote">
+        <details class="quote">
           <summary>Source code in <code>ml_base/utilities/model_manager.py</code></summary>
-          <div class="highlight">
-<pre><span></span><code><span class="k">def</span> <span class="nf">load_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">class_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">"""Import and instantiate an MLModel object from a class path.</span>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">load_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">class_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Import and instantiate an MLModel object from a class path.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        class_path: Class path to the model's MLModel class.</span>
+<span class="sd">        class_path: Class path to the model&#39;s MLModel class.</span>
 
 <span class="sd">    Raises:</span>
 <span class="sd">        ValueError: Raised if the model is not a subtype of MLModel, or if a model with the same qualified name</span>
 <span class="sd">                  is already loaded in the ModelManager.</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># splitting the class_path into module path and class name</span>
-    <span class="n">module_path</span> <span class="o">=</span> <span class="s2">"."</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">class_path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"."</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-    <span class="n">class_name</span> <span class="o">=</span> <span class="n">class_path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"."</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">module_path</span> <span class="o">=</span> <span class="s2">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">class_path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">class_name</span> <span class="o">=</span> <span class="n">class_path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
     <span class="c1"># importing the model class</span>
     <span class="n">model_module</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">module_path</span><span class="p">)</span>
@@ -1579,154 +3216,154 @@
     <span class="n">model_object</span> <span class="o">=</span> <span class="n">model_class</span><span class="p">()</span>
 
     <span class="bp">self</span><span class="o">.</span><span class="n">add_model</span><span class="p">(</span><span class="n">model_object</span><span class="p">)</span>
-</code></pre>
-</div>
-</details>
-</div>
-</div>
-<div class="doc doc-object doc-method">
-<h2 class="doc doc-heading" id="ml_base.utilities.model_manager.ModelManager.remove_model">
+</code></pre></div>
+        </details>
+    </div>
 
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="ml_base.utilities.model_manager.ModelManager.remove_model" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">remove_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qualified_name</span><span class="p">)</span></code>
 
 
-      </h2>
-<div class="doc doc-contents ">
-<p>Remove an MLModel object from the ModelManager singleton.</p>
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Remove an MLModel object from the ModelManager singleton.</p>
+
 <p><strong>Parameters:</strong></p>
 <table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>qualified_name</code></td>
-<td><code>str</code></td>
-<td>
-<p>The qualified name of the model to be returned.</p>
-</td>
-<td><em>required</em></td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>qualified_name</code></td>
+        <td><code>str</code></td>
+        <td><p>The qualified name of the model to be returned.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
 </table>
 <p><strong>Exceptions:</strong></p>
 <table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ValueError</code></td>
-<td>
-<p>Raised if a model with the qualified name can't be found in the ModelManager singleton.</p>
-</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>ValueError</code></td>
+        <td><p>Raised if a model with the qualified name can't be found in the ModelManager singleton.</p></td>
+      </tr>
+  </tbody>
 </table>
-<details class="quote">
+        <details class="quote">
           <summary>Source code in <code>ml_base/utilities/model_manager.py</code></summary>
-          <div class="highlight">
-<pre><span></span><code><span class="k">def</span> <span class="nf">remove_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qualified_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">"""Remove an MLModel object from the ModelManager singleton.</span>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">remove_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qualified_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Remove an MLModel object from the ModelManager singleton.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        qualified_name: The qualified name of the model to be returned.</span>
 
 <span class="sd">    Raises:</span>
-<span class="sd">        ValueError: Raised if a model with the qualified name can't be found in the ModelManager singleton.</span>
+<span class="sd">        ValueError: Raised if a model with the qualified name can&#39;t be found in the ModelManager singleton.</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># searching the list of model objects to find the one with the right qualified name</span>
-    <span class="n">model_objects</span> <span class="o">=</span> <span class="p">[</span><span class="n">model</span> <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span> <span class="k">if</span> <span class="n">model</span><span class="o">.</span><span class="n">qualified_name</span> <span class="o">==</span> <span class="n">qualified_name</span><span class="p">]</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">model</span> <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span> <span class="k">if</span> <span class="n">model</span><span class="o">.</span><span class="n">qualified_name</span> <span class="o">==</span> <span class="n">qualified_name</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">model_objects</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Instance of model '</span><span class="si">{}</span><span class="s2">' not found in ModelManager."</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">qualified_name</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">model</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Instance of model &#39;</span><span class="si">{}</span><span class="s2">&#39; not found in ModelManager.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">qualified_name</span><span class="p">))</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">model_objects</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-</code></pre>
-</div>
-</details>
-</div>
-</div>
-</div>
-</div>
-</div>
-                
-              
-              
-                
+        <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
 
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
 
               
             </article>
           </div>
         </div>
+        
       </main>
       
-        
-<footer class="md-footer">
+        <footer class="md-footer">
   
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
         
-          <a href="../examples/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <a href="../decorator/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Decorator Examples" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Decorator Examples
             </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Examples
-              </div>
-            </div>
-          </a>
-        
-        
-      </nav>
-    </div>
+          </div>
+        </a>
+      
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-          <div class="md-footer-copyright__highlight">
-            2021, Brian Schmidt
-          </div>
-        
-        Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs
-        </a>
-      </div>
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2021, Brian Schmidt
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
   </div>
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.092fa1f6.min.js"}</script>
     
-      <script src="../assets/javascripts/vendor.53cc9318.min.js"></script>
-      <script src="../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
-      
-      <script>
-        app = initialize({
-          base: "..",
-          features: [],
-          search: Object.assign({
-            worker: "../assets/javascripts/worker/search.9c0e82ba.min.js"
-          }, typeof search !== "undefined" && search)
-        })
-      </script>
+    
+      <script src="../assets/javascripts/bundle.e3b2bf44.min.js"></script>
       
     
   </body>

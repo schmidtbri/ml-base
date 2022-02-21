@@ -1,0 +1,998 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="ML Base Package Documentation">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.10">
+    
+    
+      
+        <title>Decorator Examples - ML Base</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.d6be258b.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mlmodeldecorator-example" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ML Base" class="md-header__button md-logo" aria-label="ML Base" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ML Base
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Decorator Examples
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/schmidtbri/ml-base/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ML Base" class="md-nav__button md-logo" aria-label="ML Base" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    ML Base
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/schmidtbri/ml-base/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Examples
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Examples" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic/" class="md-nav__link">
+        Basic Examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Decorator Examples
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Decorator Examples
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-decorator" class="md-nav__link">
+    Creating a Decorator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-simple-decorator-class" class="md-nav__link">
+    Creating a Simple Decorator Class
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-an-mlmodeldecorator-with-behavior" class="md-nav__link">
+    Creating an MLModelDecorator With Behavior
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-more-complex-decorator" class="md-nav__link">
+    A More Complex Decorator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-the-model-after-initialization" class="md-nav__link">
+    Setting the Model After Initialization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#displaying-the-decorator" class="md-nav__link">
+    Displaying the Decorator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-an-exception-handler-decorator" class="md-nav__link">
+    Creating an Exception Handler Decorator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurable-mlmodel-decorator" class="md-nav__link">
+    Configurable MLModel Decorator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-the-decorated-model-to-the-modelmanager" class="md-nav__link">
+    Adding the Decorated Model to the ModelManager
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-decorator-to-a-model-in-the-modelmanager" class="md-nav__link">
+    Adding a Decorator to a Model in the ModelManager
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        API
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-decorator" class="md-nav__link">
+    Creating a Decorator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-simple-decorator-class" class="md-nav__link">
+    Creating a Simple Decorator Class
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-an-mlmodeldecorator-with-behavior" class="md-nav__link">
+    Creating an MLModelDecorator With Behavior
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-more-complex-decorator" class="md-nav__link">
+    A More Complex Decorator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-the-model-after-initialization" class="md-nav__link">
+    Setting the Model After Initialization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#displaying-the-decorator" class="md-nav__link">
+    Displaying the Decorator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-an-exception-handler-decorator" class="md-nav__link">
+    Creating an Exception Handler Decorator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurable-mlmodel-decorator" class="md-nav__link">
+    Configurable MLModel Decorator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-the-decorated-model-to-the-modelmanager" class="md-nav__link">
+    Adding the Decorated Model to the ModelManager
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-decorator-to-a-model-in-the-modelmanager" class="md-nav__link">
+    Adding a Decorator to a Model in the ModelManager
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/schmidtbri/ml-base/edit/master/docs/decorator.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<h1 id="mlmodeldecorator-example">MLModelDecorator Example</h1>
+<pre><code class="language-python">import sys
+import os
+
+sys.path.insert(0, os.path.abspath(os.path.join(&quot;./&quot;, os.pardir)))
+</code></pre>
+<h2 id="creating-a-decorator">Creating a Decorator</h2>
+<p>Decorators are objects that allow us to extend the functionality of other objects at runtime without having to modify the objects that are being decorated. The decorator pattern is a well-known object-oriented design pattern that helps to make code more flexible and reusable.</p>
+<p>Notice that we are not working with Python decorators, which are used to decorate functions and methods at loading time only (when the function or class is created). The decorators we will work with are run-time decorators since they are applied during the runtime of the program.</p>
+<p>The objects we want to decorate are MLModel objects, so we'll need an MLModel class to work with. We'll create a simple mocked model class to work with along with the input and output schemas:</p>
+<pre><code class="language-python">from ml_base.ml_model import MLModel
+from pydantic import BaseModel, Field
+from enum import Enum
+
+
+class ModelInput(BaseModel):
+    sepal_length: float = Field(gt=5.0, lt=8.0)
+    sepal_width: float = Field(gt=2.0, lt=6.0)
+    petal_length: float = Field(gt=1.0, lt=6.8)
+    petal_width: float = Field(gt=0.0, lt=3.0)
+
+
+class Species(str, Enum):
+    iris_setosa = &quot;Iris setosa&quot;
+    iris_versicolor = &quot;Iris versicolor&quot;
+    iris_virginica = &quot;Iris virginica&quot;
+
+
+class ModelOutput(BaseModel):
+    species: Species
+
+
+class IrisModelMock(MLModel):
+    display_name = &quot;Iris Model&quot;
+    qualified_name = &quot;iris_model&quot;
+    description = &quot;A model to predict the species of a flower based on its measurements.&quot;
+    version = &quot;1.0.0&quot;
+    input_schema = ModelInput
+    output_schema = ModelOutput
+
+    def __init__(self):
+        pass
+
+    def predict(self, data: ModelInput) -&gt; ModelOutput:
+        return ModelOutput(species=&quot;Iris setosa&quot;)
+</code></pre>
+<p>This class mocks the input and output of the IrisModel we used in the previous example. The mocked model will always return a prediction of "Iris setosa". We'll instantiate it to make sure that everything works:</p>
+<pre><code class="language-python">model = IrisModelMock()
+
+prediction = model.predict(
+    ModelInput(sepal_length=5.1,
+               sepal_width=2.2,
+               petal_length=1.2,
+               petal_width=1.3))
+
+prediction
+</code></pre>
+<pre><code>ModelOutput(species=&lt;Species.iris_setosa: 'Iris setosa'&gt;)
+</code></pre>
+<h2 id="creating-a-simple-decorator-class">Creating a Simple Decorator Class</h2>
+<p>To create a decorator for MLModel classes, we'll inherit from the MLModelDecorator class:</p>
+<pre><code class="language-python">from ml_base import MLModelDecorator
+from ml_base.ml_model import MLModelException
+
+
+class SimpleDecorator(MLModelDecorator):
+    pass
+</code></pre>
+<p>The decorator doesn't do anything but it's still useful because it inherits default behavior from the base class. In order to wrap the model instance with a decorator instance, we instantiate the decorator like this:</p>
+<pre><code class="language-python">decorator = SimpleDecorator(model)
+</code></pre>
+<p>Now we can make a prediction with the model just like we normally would:</p>
+<pre><code class="language-python">prediction = decorator.predict(
+    ModelInput(sepal_length=5.1,
+               sepal_width=2.2,
+               petal_length=1.2,
+               petal_width=1.3))
+
+print(prediction)
+</code></pre>
+<pre><code>species=&lt;Species.iris_setosa: 'Iris setosa'&gt;
+</code></pre>
+<p>The decorator's default implementation of the predict method does nothing but call the corresponding method in the model instance. The same is true for the other parts of the MLModel API.</p>
+<pre><code class="language-python">print(decorator.display_name)
+print(decorator.qualified_name)
+print(decorator.description)
+print(decorator.version)
+print(decorator.input_schema)
+print(decorator.output_schema)
+</code></pre>
+<pre><code>Iris Model
+iris_model
+A model to predict the species of a flower based on its measurements.
+1.0.0
+&lt;class '__main__.ModelInput'&gt;
+&lt;class '__main__.ModelOutput'&gt;
+</code></pre>
+<h2 id="creating-an-mlmodeldecorator-with-behavior">Creating an MLModelDecorator With Behavior</h2>
+<p>The example above wasn't very useful because it didn't do anything. We'll override the default implementation of the MLModelDecorator base class in order to add some behavior.</p>
+<p>This decorator executes around the predict() method:</p>
+<pre><code class="language-python">class SimplePredictDecorator(MLModelDecorator):
+
+    def predict(self, data):
+        print(&quot;Executing before prediction.&quot;)
+        prediction = self._model.predict(data=data)
+        print(&quot;Executing after prediction.&quot;)
+        return prediction
+</code></pre>
+<p>The decorator wraps around the predict() method and does nothing except print a message before and after executing the predict method of the model.</p>
+<p>We can try it out by wrapping the model instance again:</p>
+<pre><code class="language-python">decorator = SimplePredictDecorator(model)
+</code></pre>
+<p>Now, we'll call the predict method:</p>
+<pre><code class="language-python">prediction = decorator.predict(ModelInput(
+    sepal_length=5.1,
+    sepal_width=2.1,
+    petal_length=1.2,
+    petal_width=1.3))
+
+prediction
+</code></pre>
+<pre><code>Executing before prediction.
+Executing after prediction.
+
+
+
+
+
+ModelOutput(species=&lt;Species.iris_setosa: 'Iris setosa'&gt;)
+</code></pre>
+<p>The decorator instance executed before and after the model's predict() method and printed some messages.</p>
+<h2 id="a-more-complex-decorator">A More Complex Decorator</h2>
+<p>The MLModelDecorator class is able to "wrap" every method and property in the MLModel base class. We'll build a more complex MLModelDecorator to show how this works:</p>
+<pre><code class="language-python">class ComplexDecorator(MLModelDecorator):
+
+    @property
+    def display_name(self) -&gt; str:
+        return self._model.display_name + &quot; extra&quot;
+
+    @property
+    def qualified_name(self) -&gt; str:
+        return self._model.qualified_name + &quot; extra&quot;
+
+    @property
+    def description(self) -&gt; str:
+        return self._model.description + &quot; extra&quot;
+
+    @property
+    def version(self) -&gt; str:
+        return self._model.version + &quot; extra&quot;
+
+    def predict(self, data):
+        print(&quot;Executing before prediction.&quot;)
+        prediction = self._model.predict(data=data)
+        print(&quot;Executing after prediction.&quot;)
+        return prediction
+</code></pre>
+<pre><code class="language-python">complex_decorator = ComplexDecorator(model)
+
+print(complex_decorator.display_name)
+print(complex_decorator.qualified_name)
+print(complex_decorator.description)
+print(complex_decorator.version)
+</code></pre>
+<pre><code>Iris Model extra
+iris_model extra
+A model to predict the species of a flower based on its measurements. extra
+1.0.0 extra
+</code></pre>
+<p>The properties of the MLModel instance were modifyied by adding the word "extra" to them, including the input and output schemas, although it would not be a good idea to convert the schema classes to strings in a normal situation.</p>
+<p>Any other methods, attributes, or properties of an MLModel class that are not part of the MLModel interface are not modified by MLModelDecorator instances that are wrapping them. To show this we'll create an MLModel class with some extra attributes:</p>
+<pre><code class="language-python">class IrisModelMockWithExtraAttributes(MLModel):
+    display_name = &quot;Iris Model&quot;
+    qualified_name = &quot;iris_model&quot;
+    description = &quot;A model to predict the species of a flower based on its measurements.&quot;
+    version = &quot;1.0.0&quot;
+    input_schema = ModelInput
+    output_schema = ModelOutput
+
+    def __init__(self):
+        self.extra_attribute = &quot;extra_attribute&quot;
+
+    def predict(self, data: ModelInput) -&gt; ModelOutput:
+        return ModelOutput(species=&quot;Iris setosa&quot;)
+
+    @property
+    def extra_property(self):
+        return &quot;extra_property&quot;
+
+    def extra_method(self):
+        return &quot;extra_method&quot;
+</code></pre>
+<pre><code class="language-python">model = IrisModelMockWithExtraAttributes()
+
+decorator = ComplexDecorator(model)
+
+print(decorator.extra_attribute)
+print(decorator.extra_property)
+print(decorator.extra_method())
+</code></pre>
+<pre><code>extra_attribute
+extra_property
+extra_method
+</code></pre>
+<p>The MLModelDecorator class is designed to execute around the public API of the MLModel base class and stay out of the way of any other part of an MLModel instance.</p>
+<p>When implementing decorators, its important to remember to call the method or return the property of the model instance itself, otherwise the decorator would no longer decorate the model, it would just replace it.</p>
+<h2 id="setting-the-model-after-initialization">Setting the Model After Initialization</h2>
+<p>The MLModelDecorator can also be instantiated without a reference to an MLModel instance to decorate.</p>
+<pre><code class="language-python">decorator = ComplexDecorator()
+
+decorator
+</code></pre>
+<pre><code>ComplexDecorator(None)
+</code></pre>
+<p>When we print the decorator, whe model reference inside shows up as "None".</p>
+<p>If we try to execute access the API of the decorator, we'll get an error:</p>
+<pre><code class="language-python">try:
+    decorator.version
+except Exception as e:
+    print(e)
+</code></pre>
+<pre><code>'NoneType' object has no attribute 'version'
+</code></pre>
+<p>To set the model instances after initialization, we can use the set_model() method.</p>
+<pre><code class="language-python">decorator.set_model(model)
+
+decorator
+</code></pre>
+<pre><code>ComplexDecorator(IrisModelMockWithExtraAttributes)
+</code></pre>
+<p>Accessing the decorator now accesses the model as show above:</p>
+<pre><code class="language-python">decorator.version
+</code></pre>
+<pre><code>'1.0.0 extra'
+</code></pre>
+<h2 id="displaying-the-decorator">Displaying the Decorator</h2>
+<p>Once a model instance has been decorated, we can see that it is decorating when we print it:</p>
+<pre><code class="language-python">decorator
+</code></pre>
+<pre><code>ComplexDecorator(IrisModelMockWithExtraAttributes)
+</code></pre>
+<p>The ComplexDecorator is wrapping an instance of MLModelMock.</p>
+<p>If we add another decorator, we can see it is decorated again:</p>
+<pre><code class="language-python">decorator = SimplePredictDecorator(decorator)
+
+decorator
+</code></pre>
+<pre><code>SimplePredictDecorator(ComplexDecorator(IrisModelMockWithExtraAttributes))
+</code></pre>
+<p>Decorators can decorate other instances of decorators because they have the same API as MLModel.</p>
+<h2 id="creating-an-exception-handler-decorator">Creating an Exception Handler Decorator</h2>
+<p>To show a real example of what a decorator can do, we'll create a decorator that handles exceptions raised in the predict() method and logs them.</p>
+<pre><code class="language-python">import logging
+
+
+logger = logging.getLogger(__name__)
+
+
+class ExceptionLoggerDecorator(MLModelDecorator):
+
+    def predict(self, data):
+        try:
+            return self._model.predict(data=data)
+        except Exception as e:
+            logger.exception(&quot;Exception in the predict() method of {}.&quot;.format(str(self._model)))
+
+</code></pre>
+<p>We'll need to raise an exception in the model class' predict() method in order to try this out, so we'll redefine the IrisModelMock class to raise an exception:</p>
+<pre><code class="language-python">class IrisModelMock(MLModel):
+    display_name = &quot;Iris Model&quot;
+    qualified_name = &quot;iris_model&quot;
+    description = &quot;A model to predict the species of a flower based on its measurements.&quot;
+    version = &quot;1.0.0&quot;
+    input_schema = ModelInput
+    output_schema = ModelOutput
+
+    def __init__(self):
+        pass
+
+    def predict(self, data):
+        raise Exception(&quot;Exception!&quot;)
+</code></pre>
+<p>Now all we need is to instantiate the MLModel class and the decorator to try it out:</p>
+<pre><code class="language-python">model = IrisModelMock()
+
+decorator = ExceptionLoggerDecorator(model)
+
+# making a failing prediction
+prediction = decorator.predict(ModelInput(
+    sepal_length=5.1,
+    sepal_width=2.1,
+    petal_length=1.2,
+    petal_width=1.3))
+</code></pre>
+<pre><code>Exception in the predict() method of IrisModelMock.
+Traceback (most recent call last):
+  File "&lt;ipython-input-21-ea4dab4c8b70&gt;", line 11, in predict
+    return self._model.predict(data=data)
+  File "&lt;ipython-input-22-79739fa901dd&gt;", line 13, in predict
+    raise Exception("Exception!")
+Exception: Exception!
+</code></pre>
+<p>The exception was caught by the decorator and logged.</p>
+<h2 id="configurable-mlmodel-decorator">Configurable MLModel Decorator</h2>
+<p>Next, we'll build an MLModelDecorator that can be configured.</p>
+<pre><code class="language-python">class AddStringDecorator(MLModelDecorator):
+
+    def __init__(self, model: MLModel, extra_name: str) -&gt; None:
+        super().__init__(model, extra_name=extra_name)
+
+    @property
+    def display_name(self) -&gt; str:
+        return self._model.display_name + self._configuration[&quot;extra_name&quot;]
+</code></pre>
+<p>The __init__() method receives the normal "model" parameter and passes it to the super class. It also receives a parameter called "extra_name" which is also passed to the super class as a keyword argument. Each configuration items should be passed to the super class in this way.</p>
+<p>The decorator adds a string to the display_name property of the model object:</p>
+<pre><code class="language-python">model = IrisModelMock()
+
+decorator = AddStringDecorator(model, extra_name=&quot; extra name&quot;)
+</code></pre>
+<p>Now when we access the properties, we'll get the string we configured added to the end:</p>
+<pre><code class="language-python">print(decorator.display_name)
+</code></pre>
+<pre><code>Iris Model extra name
+</code></pre>
+<p>Once the configuration has been passed to the MLModelDecorator super class as a keyword argument, it is saved in the "_configuration" attribute and can be accessed by the methods in the decorator class.</p>
+<p>This also means that the "_configuration" and "_model" names are reserved within MLModelDecorator classes because they are being used by the base class.</p>
+<p>You can also set the values in the "_configuration" and "_model" attributes of the decorator:</p>
+<pre><code class="language-python">decorator._configuration[&quot;asdf&quot;] = &quot;asdf&quot;
+
+decorator._configuration
+</code></pre>
+<pre><code>{'extra_name': ' extra name', 'asdf': 'asdf'}
+</code></pre>
+<h2 id="adding-the-decorated-model-to-the-modelmanager">Adding the Decorated Model to the ModelManager</h2>
+<p>Adding a decorated model to the ModelManager singleton is simple. First we'll create a decorated model:</p>
+<pre><code class="language-python">model = IrisModelMock()
+
+decorated_model = SimpleDecorator(model)
+</code></pre>
+<p>Next, we'll create the ModelManager:</p>
+<pre><code class="language-python">from ml_base.utilities import ModelManager
+
+
+model_manager = ModelManager()
+</code></pre>
+<p>Finally, we'll add the decorated model as we normally would:</p>
+<pre><code class="language-python">model_manager.add_model(decorated_model)
+
+model_manager.get_model_metadata(&quot;iris_model&quot;)
+</code></pre>
+<pre><code>{'display_name': 'Iris Model',
+ 'qualified_name': 'iris_model',
+ 'description': 'A model to predict the species of a flower based on its measurements.',
+ 'version': '1.0.0',
+ 'input_schema': {'title': 'ModelInput',
+  'type': 'object',
+  'properties': {'sepal_length': {'title': 'Sepal Length',
+    'exclusiveMinimum': 5.0,
+    'exclusiveMaximum': 8.0,
+    'type': 'number'},
+   'sepal_width': {'title': 'Sepal Width',
+    'exclusiveMinimum': 2.0,
+    'exclusiveMaximum': 6.0,
+    'type': 'number'},
+   'petal_length': {'title': 'Petal Length',
+    'exclusiveMinimum': 1.0,
+    'exclusiveMaximum': 6.8,
+    'type': 'number'},
+   'petal_width': {'title': 'Petal Width',
+    'exclusiveMinimum': 0.0,
+    'exclusiveMaximum': 3.0,
+    'type': 'number'}},
+  'required': ['sepal_length', 'sepal_width', 'petal_length', 'petal_width']},
+ 'output_schema': {'title': 'ModelOutput',
+  'type': 'object',
+  'properties': {'species': {'$ref': '#/definitions/Species'}},
+  'required': ['species'],
+  'definitions': {'Species': {'title': 'Species',
+    'description': 'An enumeration.',
+    'enum': ['Iris setosa', 'Iris versicolor', 'Iris virginica'],
+    'type': 'string'}}}}
+</code></pre>
+<p>The ModelManager is able to work with the decorated model object because it has the same interface as MLModel.</p>
+<pre><code class="language-python">model_manager.clear_instance()
+</code></pre>
+<h2 id="adding-a-decorator-to-a-model-in-the-modelmanager">Adding a Decorator to a Model in the ModelManager</h2>
+<p>The ModelManager also has support for decorating models that are already held inside by using the add_decorator() method:</p>
+<pre><code class="language-python">from ml_base.utilities import ModelManager
+
+model_manager = ModelManager()
+
+model = IrisModelMock()
+
+model_manager.add_model(model)
+
+print(model_manager.get_models())
+</code></pre>
+<pre><code>[{'display_name': 'Iris Model', 'qualified_name': 'iris_model', 'description': 'A model to predict the species of a flower based on its measurements.', 'version': '1.0.0'}]
+</code></pre>
+<pre><code class="language-python">decorator = SimpleDecorator()
+
+model_manager.add_decorator(&quot;iris_model&quot;, decorator)
+</code></pre>
+<p>When we access the model instance, we can see that it is now decorated:</p>
+<pre><code class="language-python">model = model_manager.get_model(&quot;iris_model&quot;)
+
+model
+</code></pre>
+<pre><code>SimpleDecorator(IrisModelMock)
+</code></pre>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../basic/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Basic Examples" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Basic Examples
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../api/" class="md-footer__link md-footer__link--next" aria-label="Next: API" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              API
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2021, Brian Schmidt
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.092fa1f6.min.js"}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e3b2bf44.min.js"></script>
+      
+    
+  </body>
+</html>
