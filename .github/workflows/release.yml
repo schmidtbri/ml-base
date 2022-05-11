@@ -27,7 +27,7 @@ jobs:
       env:
         SOURCE_TAG: ${{ github.event.release.tag_name }}
       run: |
-        echo "${SOURCE_TAG:1}" > ml_base/version.txt
+        echo -n "${SOURCE_TAG:1}" > ml_base/version.txt
 
     - name: "Build Package"
       run: make build
