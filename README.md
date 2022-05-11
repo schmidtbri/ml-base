@@ -1,14 +1,27 @@
-# ML Base Package
-Base classes and utilities that are useful for deploying ML models.
+![Code Quality Status](https://github.com/schmidtbri/ml-base/actions/workflows/test.yml/badge.svg)
+[![License](https://img.shields.io/badge/license-BSD--3--Clause-green)](https://opensource.org/licenses/BSD-3-Clause)
+[![PyPi](https://img.shields.io/badge/pypi-v0.2.1-green)](https://pypi.org/project/ml-base/)
 
-This package is useful for creating abstractions around machine learning models that make it easier to deploy them into 
-other software systems. 
+# ml-base
+
+**ml-base** is a package that provides base classes and utilities that are useful for deploying machine learning models.
 
 ## Installation 
 
-To download the code and set up a development use these instructions. 
+The easiest way to install ml-base is using pip
 
-To download the source code execute this command:
+```bash
+pip install ml-base
+```
+
+## Usage
+
+There are several examples of how to use the ml-base framework in the 
+[documentation](https://schmidtbri.github.io/ml-base/).
+
+## Development
+
+First, download the source code with this command:
 
 ```bash
 git clone https://github.com/schmidtbri/ml-base
@@ -31,8 +44,10 @@ Install the dependencies:
 make dependencies
 ```
 
-## Running the Unit Tests
+## Testing 
+
 To run the unit test suite execute these commands:
+
 ```bash
 # first install the test dependencies
 make test-dependencies

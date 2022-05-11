@@ -8,7 +8,6 @@ __all__ = ["MLModel", "MLModelDecorator", "ModelManager"]
 
 
 try:
-    print(join(abspath(dirname(__file__)), "version.txt"))
     with open(join(abspath(dirname(__file__)), "version.txt"), encoding="utf-8") as f:
         __version__ = f.read()
 except Exception:
