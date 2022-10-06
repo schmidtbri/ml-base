@@ -24,7 +24,7 @@ coverage==6.3.2
     #   coverage-badge
 coverage-badge==1.1.0
     # via -r test_requirements.in
-dparse==0.5.1
+dparse==0.5.2
     # via safety
 future==0.18.2
     # via radon
@@ -85,7 +85,6 @@ pytype==2022.5.10
 pyyaml==6.0
     # via
     #   bandit
-    #   dparse
     #   libcst
 radon==5.1.0
     # via -r test_requirements.in
