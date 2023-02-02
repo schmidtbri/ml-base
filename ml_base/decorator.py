@@ -1,6 +1,7 @@
 """Base class for building decorators for MLModel objects."""
-from typing import Optional
+from typing import Optional, Any
 from ml_base.ml_model import MLModel
+from pydantic import BaseModel
 
 
 class MLModelDecorator(MLModel):
@@ -15,7 +16,7 @@ class MLModelDecorator(MLModel):
 
     _decorator_attributes = ["_model", "_configuration"]
 
-    def __init__(self, model: Optional[MLModel] = None, **kwargs):
+    def __init__(self, model: Optional[MLModel] = None, **kwargs: dict) -> None:
         """Initialize MLModelDecorator instance.
 
         !!! note
@@ -32,7 +33,7 @@ class MLModelDecorator(MLModel):
         self.__dict__["_model"] = model
         self.__dict__["_configuration"] = kwargs
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         """Return a string describing the decorator and the model that it is decorating."""
         return "{}({})".format(self.__class__.__name__, str(self.__dict__["_model"]))
 
@@ -44,21 +45,21 @@ class MLModelDecorator(MLModel):
         self.__dict__["_model"] = model
         return self
 
-    def __getattr__(self, name):
+    def __getattr__(self, name: str) -> Any:
         """Get an attribute."""
         if name in MLModelDecorator._decorator_attributes:
             return self.__dict__[name]
         else:
             return getattr(self.__dict__["_model"], name)
 
-    def __setattr__(self, name, value):
+    def __setattr__(self, name: str, value: Any) -> None:
         """Set an attribute."""
         if name in MLModelDecorator._decorator_attributes:
             setattr(self, name, value)
         else:
             setattr(self.__dict__["_model"], name, value)
 
-    def __delattr__(self, name):
+    def __delattr__(self, name: str) -> None:
         """Delete an attribute."""
         delattr(self.__dict__["_model"], name)
 
@@ -108,7 +109,7 @@ class MLModelDecorator(MLModel):
         return getattr(self, "_model").version
 
     @property
-    def input_schema(self):
+    def input_schema(self) -> BaseModel:
         """Property that returns the schema that is accepted by the predict() method.
 
         !!! note
@@ -119,7 +120,7 @@ class MLModelDecorator(MLModel):
         return getattr(self, "_model").input_schema
 
     @property
-    def output_schema(self):
+    def output_schema(self) -> BaseModel:
         """Property returns the schema that is returned by the predict() method.
 
         !!! note
@@ -129,7 +130,7 @@ class MLModelDecorator(MLModel):
         """
         return getattr(self, "_model").output_schema
 
-    def predict(self, data):
+    def predict(self, data: BaseModel) -> BaseModel:
         """Predict with the model.
 
         Params:

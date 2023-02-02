@@ -6,7 +6,7 @@ from pydantic import BaseModel
 class MLModel(ABC):
     """Base class for ML model prediction code."""
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         """Return a string representing the model object."""
         return self.__class__.__name__
 
@@ -62,7 +62,7 @@ class MLModel(ABC):
 
     @property
     @abstractmethod
-    def input_schema(self):
+    def input_schema(self) -> BaseModel:
         """Property that returns the schema that is accepted by the predict() method.
 
         Returns:
@@ -76,7 +76,7 @@ class MLModel(ABC):
 
     @property
     @abstractmethod
-    def output_schema(self):
+    def output_schema(self) -> BaseModel:
         """Property returns the schema that is returned by the predict() method.
 
         Returns:
@@ -94,7 +94,7 @@ class MLModel(ABC):
         raise NotImplementedError()  # pragma: no cover
 
     @abstractmethod
-    def predict(self, data):
+    def predict(self, data: BaseModel) -> BaseModel:
         """Prediction with the model.
 
         Args:
@@ -110,7 +110,7 @@ class MLModel(ABC):
 class MLModelException(Exception):
     """Exception base class used to raise exceptions within MLModel derived classes."""
 
-    def __init__(self, *args):
+    def __init__(self, *args: tuple) -> None:
         """Initialize MLModelException instance."""
         Exception.__init__(self, *args)
 
@@ -118,6 +118,6 @@ class MLModelException(Exception):
 class MLModelSchemaValidationException(MLModelException):
     """Exception type used to raise schema validation exceptions within MLModel derived classes."""
 
-    def __init__(self, *args):
+    def __init__(self, *args: tuple) -> None:
         """Initialize MLModelSchemaValidationException instance."""
         MLModelException.__init__(self, *args)
