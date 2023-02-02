@@ -1,6 +1,6 @@
 ![Code Quality Status](https://github.com/schmidtbri/ml-base/actions/workflows/test.yml/badge.svg)
 [![License](https://img.shields.io/badge/license-BSD--3--Clause-green)](https://opensource.org/licenses/BSD-3-Clause)
-[![PyPi](https://img.shields.io/badge/pypi-v0.2.1-green)](https://pypi.org/project/ml-base/)
+[![PyPi](https://img.shields.io/badge/pypi-v0.2.2-green)](https://pypi.org/project/ml-base/)
 
 # ml-base
 

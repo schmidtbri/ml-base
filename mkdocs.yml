@@ -3,7 +3,7 @@ theme:
   name: "material"
 repo_url: https://github.com/schmidtbri/ml-base
 site_description: ML Base Package Documentation
-copyright: 2021, Brian Schmidt
+copyright: 2023, Brian Schmidt
 nav:
     - Home: index.md
     - Examples:

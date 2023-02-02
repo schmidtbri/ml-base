@@ -15,33 +15,26 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
       - name: "Set up Python 3.9"
         uses: actions/setup-python@v2
         with:
           python-version: 3.9
-
       - name: "Update Tools"
         run: |
           python -m pip install --upgrade pip
           python -m pip install --upgrade setuptools
           python -m pip install --upgrade wheel
-
       - name: "Install Dependencies"
         run: make dependencies
-
       - name: "Install Doc Dependencies"
         run: make doc-dependencies
-
       - name: "Build Documentation"
         run: make build-docs
-
       - name: "Archive Documentation"
         uses: actions/upload-artifact@v1
         with:
           name: documentation
           path: site
-
       - name: "Push to gh-pages Branch"
         uses: peaceiris/actions-gh-pages@v3
         with:

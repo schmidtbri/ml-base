@@ -1,6 +1,7 @@
 """Model Manager class for loading, managing, and interacting with models."""
 import importlib
 from typing import List
+from threading import Lock
 
 from ml_base import MLModel, MLModelDecorator
 
@@ -8,21 +9,24 @@ from ml_base import MLModel, MLModelDecorator
 class ModelManager(object):
     """Singleton class that instantiates and manages model objects."""
 
-    def __new__(cls):  # noqa: D102
+    _lock = Lock()
+
+    def __new__(cls) -> "ModelManager":  # noqa: D102
         """Create and return a new ModelManager instance, after instance is first created it will always be returned."""
         if not hasattr(cls, "_instance"):
-            cls._instance = super(ModelManager, cls).__new__(cls)
-            cls._instance._is_initialized = False
+            with cls._lock:
+                cls._instance = super(ModelManager, cls).__new__(cls)
+                cls._instance._is_initialized = False
         return cls._instance
 
-    def __init__(self):
+    def __init__(self) -> None:
         """Construct ModelManager object."""
         if self._is_initialized is False:  # pytype: disable=attribute-error
             self._models = []
             self._is_initialized = True
 
     @classmethod
-    def clear_instance(cls):
+    def clear_instance(cls) -> None:
         """Clear singleton instance from class."""
         del cls._instance
 
